@@ -1,0 +1,45 @@
+name: Daily robots.txt audit
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      AHREFS_API_KEY: ${{ secrets.AHREFS_API_KEY }}
+      CHECKER_URL: ${{ secrets.CHECKER_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run audit
+        run: |
+          python3 audit_robots.py domains.txt --out "data/$(date -u +%F).json"
+
+      - name: Refresh Domain Rating (skips if under 28 days old)
+        if: ${{ env.AHREFS_API_KEY != '' }}
+        run: python3 fetch_dr.py
+
+      - name: Pull checker suggestions into the review queue
+        if: ${{ env.CHECKER_URL != '' }}
+        run: curl -sf "$CHECKER_URL/suggestions?min=25" -o data/suggestions.json || true
+
+      - name: Build page
+        run: python3 build_page.py
+
+      - name: Commit snapshot and page
+        run: |
+          git config user.name "audit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet || git commit -m "Daily audit $(date -u +%F)"
+          git push

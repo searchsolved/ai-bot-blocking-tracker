@@ -1,0 +1,11 @@
+name = "ai-bot-checker"
+main = "checker.js"
+compatibility_date = "2026-08-01"
+
+# Create the KV namespace first:
+#   wrangler kv namespace create SUGGEST
+# then paste the returned id below and deploy with:
+#   wrangler deploy
+[[kv_namespaces]]
+binding = "SUGGEST"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
