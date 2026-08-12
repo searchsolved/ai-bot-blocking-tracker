@@ -8,9 +8,15 @@ on:
 permissions:
   contents: write
 
+# Never let a manual run and the schedule collide on the same git push.
+concurrency:
+  group: daily-audit
+  cancel-in-progress: false
+
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     env:
       AHREFS_API_KEY: ${{ secrets.AHREFS_API_KEY }}
       CHECKER_URL: ${{ secrets.CHECKER_URL }}
@@ -21,9 +27,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run audit
+      - name: Audit every vertical
         run: |
-          python3 audit_robots.py domains.txt --out "data/$(date -u +%F).json"
+          today=$(date -u +%F)
+          for f in verticals/*.txt; do
+            v=$(basename "$f" .txt)
+            mkdir -p "data/$v"
+            echo "::group::$v"
+            python3 audit_robots.py "$f" --out "data/$v/$today.json"
+            echo "::endgroup::"
+          done
 
       - name: Refresh Domain Rating (skips if under 28 days old)
         if: ${{ env.AHREFS_API_KEY != '' }}
@@ -33,13 +46,14 @@ jobs:
         if: ${{ env.CHECKER_URL != '' }}
         run: curl -sf "$CHECKER_URL/suggestions?min=25" -o data/suggestions.json || true
 
-      - name: Build page
+      - name: Build pages
         run: python3 build_page.py
 
-      - name: Commit snapshot and page
+      - name: Commit snapshots and pages
         run: |
           git config user.name "audit-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data docs
           git diff --cached --quiet || git commit -m "Daily audit $(date -u +%F)"
+          git pull --rebase --autostash origin main
           git push

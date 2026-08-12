@@ -35,12 +35,15 @@ LICENSE = "http://ahrefs.com/legal/domain-rating-license"
 
 
 def load_domains():
+    """Every domain across every vertical list in verticals/."""
+    import glob
     seen, out = set(), []
-    for line in open(os.path.join(BASE, "domains.txt")):
-        d = line.split("|")[0].strip().lower()
-        if d and not d.startswith("#") and d not in seen:
-            seen.add(d)
-            out.append(d)
+    for path in sorted(glob.glob(os.path.join(BASE, "verticals", "*.txt"))):
+        for line in open(path):
+            d = line.split("|")[0].strip().lower()
+            if d and not d.startswith("#") and d not in seen:
+                seen.add(d)
+                out.append(d)
     return out
 
 
@@ -68,15 +71,24 @@ def main():
     if not key:
         sys.exit("AHREFS_API_KEY not set")
 
-    if not args.canary and not args.force and os.path.exists(OUT):
-        fetched = json.load(open(OUT)).get("fetched", "1970-01-01")
-        if datetime.strptime(fetched, "%Y-%m-%d").date() > date.today() - timedelta(days=MAX_AGE_DAYS):
-            print(f"dr.json is fresh ({fetched}); skipping. Use --force to refetch.")
-            return
-
     domains = load_domains()
+    existing = {}
+    if os.path.exists(OUT):
+        existing = json.load(open(OUT)).get("ratings", {})
+
     if args.canary:
         domains = domains[:5]
+    elif not args.force:
+        missing = [d for d in domains if existing.get(d) is None]
+        fetched = json.load(open(OUT)).get("fetched", "1970-01-01") if os.path.exists(OUT) else "1970-01-01"
+        stale = datetime.strptime(fetched, "%Y-%m-%d").date() <= date.today() - timedelta(days=MAX_AGE_DAYS)
+        if not missing and not stale:
+            print(f"dr.json is fresh ({fetched}) and complete; skipping. Use --force to refetch all.")
+            return
+        if missing and not stale:
+            # New domains only: enrich without refetching the whole set.
+            print(f"dr.json fresh ({fetched}); fetching {len(missing)} new domains only.")
+            domains = missing
 
     ratings, failed = {}, []
     for i, d in enumerate(domains):
@@ -101,9 +113,11 @@ def main():
         print(json.dumps(ratings, indent=1))
         return
 
+    merged = dict(existing)
+    merged.update(ratings)
     json.dump({"fetched": date.today().isoformat(),
                "source": "Ahrefs public Domain Rating endpoint (free), API key",
-               "license": LICENSE, "ratings": ratings},
+               "license": LICENSE, "ratings": merged},
               open(OUT, "w"), indent=1)
     print(f"Wrote {OUT}: {len(ratings)} domains, {len(failed)} failed: {failed}")
 

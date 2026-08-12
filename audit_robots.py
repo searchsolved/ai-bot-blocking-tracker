@@ -1,26 +1,33 @@
 #!/usr/bin/env python3
 """Audit which publishers block AI bots in robots.txt, split by bot class.
 
-Fetches robots.txt only (the file that exists to be fetched), one request
-per domain, rate limited to 1 request per 2 seconds, with an identifying
-user agent. Classifies each bot's effective rule and rolls up per bot class:
-training, search/index, user fetch.
+Fetches robots.txt only (the file that exists to be fetched) and classifies
+each bot's effective rule, rolled up per bot class: training, search/index,
+user fetch.
+
+Politeness: every domain is fetched exactly once per run, for robots.txt only,
+with an identifying user agent. Fetches run across a small worker pool, so any
+one server still sees a single request while the run as a whole completes in
+minutes rather than hours.
 
 Usage:
-    python3 audit_robots.py domains.txt [--out results.json]
+    python3 audit_robots.py domains.txt [--out results.json] [--workers 8]
     python3 audit_robots.py --canary          # built-in 10 domain canary list
 """
 
 import argparse
 import json
+import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 
 UA = "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)"
-RATE_SECONDS = 2.0
+RATE_SECONDS = 2.0   # per worker, so one server never sees a burst
+WORKERS = 8
 TIMEOUT = 15
 
 # Bot roster, 2026. name -> class
@@ -201,6 +208,8 @@ def main():
     ap.add_argument("domains_file", nargs="?", help="file with one domain per line")
     ap.add_argument("--canary", action="store_true", help="run the built-in 10 domain canary")
     ap.add_argument("--out", default=None, help="write full JSON results here")
+    ap.add_argument("--workers", type=int, default=WORKERS,
+                    help="concurrent fetches across different domains (default 8)")
     args = ap.parse_args()
 
     if args.canary:
@@ -212,17 +221,26 @@ def main():
     else:
         ap.error("give a domains file or --canary")
 
-    results = []
-    for i, domain in enumerate(domains):
-        if i:
-            time.sleep(RATE_SECONDS)
-        print(f"[{i+1}/{len(domains)}] {domain}", file=sys.stderr)
-        results.append(audit_domain(domain))
+    done = [0]
+
+    def run(item):
+        i, domain = item
+        # stagger the pool start so all workers do not fire at once
+        if i < args.workers:
+            time.sleep(i * (RATE_SECONDS / max(1, args.workers)))
+        r = audit_domain(domain)
+        done[0] += 1
+        print(f"[{done[0]}/{len(domains)}] {domain}", file=sys.stderr)
+        return r
+
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        results = list(pool.map(run, enumerate(domains)))
 
     print(summarise(results))
     if args.out:
+        collector = "github-actions" if os.environ.get("GITHUB_ACTIONS") else "local"
         payload = {"run_at": datetime.now(timezone.utc).isoformat(), "user_agent": UA,
-                   "bots": BOTS, "results": results}
+                   "collector": collector, "bots": BOTS, "results": results}
         with open(args.out, "w") as f:
             json.dump(payload, f, indent=1)
         print(f"\nFull results: {args.out}")

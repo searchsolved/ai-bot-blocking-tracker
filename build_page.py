@@ -24,8 +24,23 @@ from datetime import datetime, timezone
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(BASE, "data")
 DOCS = os.path.join(BASE, "docs")
+LISTS = os.path.join(BASE, "verticals")
 
 e = html.escape
+
+# Tracked verticals. Each has its own domain list, snapshot series and page;
+# the index page compares them. Order here is the order shown everywhere.
+VERTICALS = [
+    {"key": "news", "label": "News", "noun": "publishers", "noun_one": "publisher",
+     "title": "news publishers",
+     "blurb": "National, regional and digital-native news titles across the UK and US.",
+     "purpose": "Built for digital PR and SEO teams deciding where a placement can actually earn AI citations."},
+    {"key": "ecommerce", "label": "Ecommerce", "noun": "retailers", "noun_one": "retailer",
+     "title": "ecommerce retailers",
+     "blurb": "Online retailers and consumer brands selling physical products across the UK and US.",
+     "purpose": "Built for retailers and their SEO teams checking whether their own storefront, and their competitors', can be read and recommended by AI assistants."},
+]
+VERTICAL_BY_KEY = {v["key"]: v for v in VERTICALS}
 
 TRAINING = ["GPTBot", "CCBot", "ClaudeBot", "anthropic-ai", "Google-Extended",
             "Applebot-Extended", "Meta-ExternalAgent", "Bytespider"]
@@ -50,19 +65,19 @@ SIGNALS = {
 }
 
 
-def load_snapshots():
-    files = sorted(glob.glob(os.path.join(DATA, "????-??-??.json")))
+def load_snapshots(vertical):
+    files = sorted(glob.glob(os.path.join(DATA, vertical, "????-??-??.json")))
     if not files:
-        raise SystemExit("no snapshots in data/")
+        return None, None, None
     latest = json.load(open(files[-1]))
     prev = json.load(open(files[-2])) if len(files) > 1 else None
     return latest, prev, os.path.basename(files[-1])[:-5]
 
 
-def load_directory():
-    """domains.txt: 'domain | Display Name' with # region section comments."""
+def load_directory(vertical):
+    """verticals/<key>.txt: 'domain | Display Name' with # region section comments."""
     names, regions, current = {}, {}, "UK"
-    for line in open(os.path.join(BASE, "domains.txt")):
+    for line in open(os.path.join(LISTS, f"{vertical}.txt")):
         line = line.strip()
         if line.startswith("#"):
             if re.search(r"\bUS\b", line):
@@ -138,7 +153,18 @@ def signals_for(r):
 
 
 def diff(latest, prev):
+    """Day-over-day changes in *effective* state, not raw verdict.
+
+    'allowed' and 'no-rule' both mean not blocked, and a partial rule that
+    matched via the generic * group is not an AI decision, so comparing raw
+    verdicts reports cosmetic robots.txt edits as policy changes. Comparing
+    the state the page actually shows keeps the feed to real movements.
+    """
     if not prev:
+        return {}
+    # Sites serve different robots.txt by IP reputation, so a snapshot taken
+    # from a CI runner is not comparable with one taken from a laptop.
+    if latest.get("collector") != prev.get("collector"):
         return {}
     prev_by = {r["domain"]: r for r in prev["results"]}
     by_domain = {}
@@ -147,11 +173,13 @@ def diff(latest, prev):
         if not p or r["error"] or p["error"]:
             continue
         for bot in ALL_BOTS:
-            a = p["bots"].get(bot, {}).get("verdict")
-            b = r["bots"].get(bot, {}).get("verdict")
-            if a and b and a != b:
+            if bot not in r["bots"] or bot not in p["bots"]:
+                continue
+            a, b = engine_state(p, bot), engine_state(r, bot)
+            if a != b:
                 direction = "closed" if b == "blocked" else ("opened" if a == "blocked" else "changed")
-                by_domain.setdefault(r["domain"], []).append((bot, a, b, direction))
+                by_domain.setdefault(r["domain"], []).append(
+                    (bot, STATE_LABEL[a].lower(), STATE_LABEL[b].lower(), direction))
     return by_domain
 
 
@@ -260,6 +288,25 @@ tr.detail td { background:var(--inset) }
 .b-norules { background:var(--neut-bg); color:var(--neut-fg) }
 .b-unreadable { background:var(--neut-bg); color:var(--neut-fg) }
 .sigcell { white-space:normal; min-width:150px }
+.vtabs { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px }
+.vtab { font-size:.85rem; font-weight:600; color:var(--muted); background:var(--card);
+  border:1px solid var(--line); border-radius:12px; padding:7px 15px; transition:all .18s ease }
+.vtab:hover { border-color:var(--ink); color:var(--ink); text-decoration:none }
+.vtab.on { background:var(--accent); border-color:var(--accent); color:#fff }
+.legend { display:flex; gap:16px; flex-wrap:wrap; margin:0 0 12px; font-size:.85rem; color:var(--muted) }
+.legend span { display:flex; align-items:center; gap:6px }
+.swatch { width:12px; height:12px; border-radius:3px; display:inline-block }
+.cmprow { display:grid; grid-template-columns:240px 1fr; align-items:center; gap:14px; padding:9px 0;
+  border-bottom:1px solid var(--line) }
+.cmprow .barlabel { white-space:normal; overflow:visible; line-height:1.35 }
+@media (max-width:640px) { .cmprow { grid-template-columns:1fr } }
+.cmprow:last-child { border-bottom:0 }
+.cmpbars { display:flex; flex-direction:column; gap:4px }
+.cmpbar { display:grid; grid-template-columns:1fr 44px; align-items:center; gap:10px }
+.cmpbar .track { height:12px; background:var(--inset); border-radius:6px; overflow:hidden }
+.cmpbar .fill { display:block; height:100%; border-radius:0 5px 5px 0; min-width:2px }
+.cmpbar .val { font-size:.8rem; color:var(--muted); font-variant-numeric:tabular-nums; text-align:right }
+.gap { font-weight:700; font-variant-numeric:tabular-nums }
 .barchart { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 22px }
 .bargroup h3 { font-size:.78rem; letter-spacing:.09em; text-transform:uppercase; color:var(--accent);
   margin:14px 0 8px; font-weight:700 }
@@ -506,11 +553,18 @@ if (checkForm && CHECKER_URL) {
 """
 
 
-def main():
-    latest, prev, date = load_snapshots()
-    names, regions = load_directory()
-    dr, dr_date = load_dr()
-    checker = checker_url()
+def build_vertical(v, dr, dr_date, checker):
+    """Render docs/<key>.html for one vertical. Returns summary stats for the index."""
+    vkey, noun, noun_one = v["key"], v["noun"], v["noun_one"]
+    latest, prev, date = load_snapshots(vkey)
+    if latest is None:
+        print(f"  {vkey}: no snapshots yet, skipping")
+        return None
+    names, regions = load_directory(vkey)
+    tabs_html = "".join(
+        f'<a class="vtab{" on" if o["key"] == vkey else ""}" href="{o["key"]}.html">{e(o["label"])}</a>'
+        for o in VERTICALS if os.path.exists(os.path.join(DATA, o["key"]))) + \
+        '<a class="vtab" href="index.html">Compare</a>'
     all_results = latest["results"]
     for r in all_results:
         d = r["domain"]
@@ -534,7 +588,7 @@ def main():
     exception = sum(1 for r in readable if "exception" in signals_for(r))
 
     os.makedirs(DOCS, exist_ok=True)
-    json.dump(latest, open(os.path.join(DOCS, "latest.json"), "w"), indent=1)
+    json.dump(latest, open(os.path.join(DOCS, f"{vkey}-latest.json"), "w"), indent=1)
 
     # ---- publisher rows ----
     def sort_key(r):
@@ -640,15 +694,20 @@ def main():
             items.append(f'<li><b>{e(names.get(dom, dom))}</b>: {evs_html}</li>')
         more = len(ordered) - 25
         if more > 0:
-            items.append(f'<li>and {more} more domains in <a href="latest.json">latest.json</a></li>')
+            items.append(f'<li>and {more} more domains in <a href="{vkey}-latest.json">the snapshot</a></li>')
         changes_html = "".join(items) or "<li>No changes against the previous snapshot.</li>"
+        if latest.get("collector") != prev.get("collector"):
+            changes_html = ("<li>The previous snapshot was collected from a different network "
+                            "vantage point, and sites serve different robots.txt by IP reputation, "
+                            "so the two are not compared. Change tracking resumes with the next "
+                            "snapshot collected the same way.</li>")
     else:
         changes_html = "<li>First snapshot; changes appear from the second run.</li>"
 
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Who Blocks AI Bots? {total} UK and US news publishers, tracked daily</title>
-<meta name="description" content="Daily robots.txt audit of {total} UK and US news publishers: which AI answer engines each publisher is open to, which training bots they block, with Domain Rating, filters and CSV export.">
+<title>Who Blocks AI Bots? {total} UK and US {v["title"]}, tracked daily</title>
+<meta name="description" content="Daily robots.txt audit of {total} UK and US {v["title"]}: which AI answer engines each one is open to, which training bots they block, with Domain Rating, filters and CSV export.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -658,9 +717,10 @@ def main():
 <div class="navlinks"><a href="https://leefoot.com/tools">Tools</a><a href="https://leefoot.com/services">Services</a><a class="cta" href="https://leefoot.com/contact">Book a Call</a></div>
 </nav></div>
 <div class="wrap">
-<div class="eyebrow">Updated daily. Last run {e(date)}</div>
+<div class="eyebrow">{e(v["label"])}. Updated daily, last run {e(date)}</div>
 <h1>Who blocks AI bots?</h1>
-<p class="standfirst">A daily robots.txt audit of {total} UK and US news publishers ({n} readable today). For each publisher: which AI answer engines its content is open to (declared policy for the ChatGPT, Perplexity and Claude search crawlers), which training bots it blocks, and its Ahrefs Domain Rating. Built for digital PR and SEO teams deciding where a placement can actually earn AI citations. Blocking a training bot is a licensing position; blocking a search bot removes you from AI answers.</p>
+<div class="vtabs">{tabs_html}</div>
+<p class="standfirst">A daily robots.txt audit of {total} UK and US {v["title"]} ({n} readable today). For each one: which AI answer engines its content is open to (declared policy for the ChatGPT, Perplexity and Claude search crawlers), which training bots it blocks, and its Ahrefs Domain Rating. {v["purpose"]} Blocking a training bot is a licensing position; blocking a search bot removes you from AI answers.</p>
 
 <div class="tiles">
 <div class="tile"><div class="n">{open3}</div><div class="l">open to all three AI answer engines</div></div>
@@ -668,10 +728,10 @@ def main():
 <div class="tile"><div class="n">{closed3}</div><div class="l">closed to all three</div></div>
 <div class="tile"><div class="n">{exception}</div><div class="l">block training bots but spare GPTBot</div></div>
 </div>
-<p class="tilenote">As of {e(date)}. {n} of {total} tracked publishers readable. Cite as: AI Bot Blocking Tracker, Lee Foot, {e(date)}.</p>
+<p class="tilenote">As of {e(date)}. {n} of {total} tracked {noun} readable. Cite as: AI Bot Blocking Tracker, Lee Foot, {e(date)}.</p>
 
 <details class="howto" open><summary>How to read this</summary><ul>
-<li>This is <b>declared policy</b> (robots.txt), not enforcement. Edge firewalls can block silently, and Open does not guarantee citations; publishers blocking search bots still get cited sometimes via retrieval from search results.</li>
+<li>This is <b>declared policy</b> (robots.txt), not enforcement. Edge firewalls can block silently, and Open does not guarantee citations; {noun} blocking search bots still get cited sometimes via retrieval from search results.</li>
 <li><b>Open</b> means the engine's search crawler is not blocked. <b>Path rules</b> means an AI-specific path restriction exists (hover the chips in the detail row for the paths). Generic sitewide housekeeping rules are treated as Open. The <b>Training bots</b> column is the separate licensing stance across the eight training crawlers; it does not affect whether a placement can be cited.</li>
 <li><b>Google AI Overviews and AI Mode are not in this data.</b> Their eligibility follows ordinary Googlebot indexing, which robots rules for AI bots do not affect. Google-Extended governs Gemini training only.</li>
 </ul></details>
@@ -684,7 +744,7 @@ def main():
 <span id="checkresult" class="meta" role="status"></span>
 </form>""" if checker else ""}
 
-<h2>Publishers</h2>
+<h2>{noun.capitalize()}</h2>
 <div class="presets">
 <button class="preset" data-preset="prime">Prime targets: DR 85+, open to all three</button>
 <button class="preset" data-preset="chatgpt">Open to ChatGPT</button>
@@ -694,7 +754,7 @@ def main():
 <button class="preset" data-preset="wall">Walls</button>
 </div>
 <div class="controls">
-<input id="q" type="search" placeholder="Publisher or domain" aria-label="Filter publishers">
+<input id="q" type="search" placeholder="{noun_one.capitalize()} or domain" aria-label="Filter {noun}">
 <select id="region" aria-label="Region"><option value="">UK and US</option><option>UK</option><option>US</option></select>
 <select id="drmin" aria-label="Minimum Domain Rating"><option value="">Any DR</option><option value="70">DR 70+</option><option value="80">DR 80+</option><option value="85">DR 85+</option><option value="90">DR 90+</option></select>
 <label><input type="checkbox" id="e-chatgpt">Open to ChatGPT</label>
@@ -707,14 +767,14 @@ def main():
 <div class="actions"><button id="csv">Download CSV</button><button id="copy">Copy domains</button><button id="reset">Reset</button></div>
 </div>
 <div class="tablewrap"><table id="t"><thead>
-<tr><th rowspan="2" data-sort="name">Publisher</th><th rowspan="2" class="hide-m" data-sort="region">Region</th><th rowspan="2" data-sort="dr" title="Ahrefs Domain Rating">DR</th><th colspan="3" class="group">Citing (AI answer engines)</th><th rowspan="2" class="hide-m" data-sort="training" title="Stance across the 8 training bots; hover a row's chip for the count">Training bots</th><th rowspan="2" class="hide-m">Notes</th></tr>
+<tr><th rowspan="2" data-sort="name">{noun_one.capitalize()}</th><th rowspan="2" class="hide-m" data-sort="region">Region</th><th rowspan="2" data-sort="dr" title="Ahrefs Domain Rating">DR</th><th colspan="3" class="group">Citing (AI answer engines)</th><th rowspan="2" class="hide-m" data-sort="training" title="Stance across the 8 training bots; hover a row's chip for the count">Training bots</th><th rowspan="2" class="hide-m">Notes</th></tr>
 <tr><th data-sort="chatgpt" title="OAI-SearchBot: ChatGPT search index">ChatGPT</th><th data-sort="perplexity" title="PerplexityBot: Perplexity search index">Perplexity</th><th data-sort="claude" title="Claude-SearchBot: Claude search index">Claude</th></tr>
 </thead><tbody>
 {"".join(rowparts)}
 </tbody></table></div>
 
-<h2>Share of publishers blocking each bot</h2>
-<p class="standfirst">Full blocks (Disallow: /) among the {n} readable publishers.</p>
+<h2>Share of {noun} blocking each bot</h2>
+<p class="standfirst">Full blocks (Disallow: /) among the {n} readable {noun}.</p>
 <div class="barchart">{"".join(bar_groups)}</div>
 
 <h2>UK vs US</h2>
@@ -728,20 +788,139 @@ def main():
 <ul>
 <li>One GET per domain per day to /robots.txt only, with an identifying user agent, rate limited to one request per two seconds.</li>
 <li>Rules follow RFC 9309 longest-match semantics. Engine states: Blocked = Disallow: / for that engine's search crawler; Path rules = an explicit AI-specific path restriction; Open = anything else, including generic sitewide rules inherited from the * group.</li>
-<li>Unreadable rows are publishers whose edge (WAF or CDN) refused even a robots.txt read from an identified audit agent. They are excluded from the headline percentages and marked Unknown.</li>
+<li>Unreadable rows are {noun} whose edge (WAF or CDN) refused even a robots.txt read from an identified audit agent. They are excluded from the headline percentages and marked Unknown.</li>
 <li>Domain Rating by <a href="https://ahrefs.com/">Ahrefs</a> (<a href="https://ahrefs.com/legal/domain-rating-license">licence</a>){f", last refreshed {e(dr_date)}" if dr_date else ""}. DR moves slowly and is refreshed periodically, not daily.</li>
 <li>Favicons via Google's public favicon service.</li>
 </ul>
 
-<footer>Data: <a href="latest.json">latest.json</a> (dated snapshots in the repo hold full history). Built by <a href="https://leefoot.com">Lee Foot</a>, ecommerce SEO consultant. More free tools at <a href="https://leefoot.com/tools">leefoot.com/tools</a>. Domain Rating by <a href="https://ahrefs.com/">Ahrefs</a>.</footer>
+<footer>Data: <a href="{vkey}-latest.json">{vkey}-latest.json</a> (dated snapshots in the repo hold full history). Built by <a href="https://leefoot.com">Lee Foot</a>, ecommerce SEO consultant. More free tools at <a href="https://leefoot.com/tools">leefoot.com/tools</a>. Domain Rating by <a href="https://ahrefs.com/">Ahrefs</a>.</footer>
 </div>
 <script>{JS}{CHECKER_JS if checker else ""}</script></body></html>'''
 
+    with open(os.path.join(DOCS, f"{vkey}.html"), "w") as f:
+        f.write(page)
+    nchanges = sum(len(x) for x in changes.values())
+    print(f"  {vkey}: {n} readable + {len(unreadable)} unreadable of {total}; "
+          f"open3={open3} prime={prime} closed3={closed3} exception={exception}; changes={nchanges}")
+    return {"v": v, "date": date, "total": total, "n": n, "open3": open3, "closed3": closed3,
+            "prime": prime, "exception": exception, "readable": readable, "changes": nchanges}
+
+
+def build_index(summaries, dr_date):
+    """Cross-vertical comparison page: the research view."""
+    date = max(s["date"] for s in summaries)
+    colours = ["#E8623D", "#1F7A8C", "#7A5510", "#4A5866"]
+    for i, s in enumerate(summaries):
+        s["colour"] = colours[i % len(colours)]
+
+    tabs_html = "".join(f'<a class="vtab" href="{s["v"]["key"]}.html">{e(s["v"]["label"])}</a>'
+                        for s in summaries) + '<a class="vtab on" href="index.html">Compare</a>'
+    legend = "".join(f'<span><i class="swatch" style="background:{s["colour"]}"></i>'
+                     f'{e(s["v"]["label"])} <span class="meta">(n={s["n"]})</span></span>' for s in summaries)
+
+    def share(s, pred):
+        pool = s["readable"]
+        return (sum(1 for r in pool if pred(r)) * 100 // len(pool)) if pool else 0
+
+    # headline measures, then every bot
+    measures = [
+        ("Open to all three AI answer engines",
+         lambda r: all(engine_state(r, b) != "blocked" for _, _, b in ENGINES)),
+        ("Blocks at least one AI search crawler",
+         lambda r: any(engine_state(r, b) == "blocked" for _, _, b in ENGINES)),
+        ("Blocks at least one training bot", lambda r: blocked_count(r, TRAINING) > 0),
+        ("No AI rules at all", lambda r: "norules" in signals_for(r)),
+    ]
+    for bot in SEARCH + TRAINING:
+        measures.append((f"Blocks {bot}",
+                         lambda r, _b=bot: r["bots"].get(_b, {}).get("verdict") == "blocked"))
+
+    rows = []
+    for label, pred in measures:
+        vals = [(s, share(s, pred)) for s in summaries]
+        bars = "".join(
+            f'<div class="cmpbar" title="{e(s["v"]["label"])}: {pct}% of {s["n"]} readable">'
+            f'<span class="track"><span class="fill" style="width:{pct}%;background:{s["colour"]}"></span></span>'
+            f'<span class="val">{pct}%</span></div>' for s, pct in vals)
+        rows.append(f'<div class="cmprow"><span class="barlabel">{e(label)}</span>'
+                    f'<div class="cmpbars">{bars}</div></div>')
+
+    cards = "".join(
+        f'<a class="tile" href="{s["v"]["key"]}.html" style="text-decoration:none">'
+        f'<div class="n">{s["total"]}</div><div class="l"><b>{e(s["v"]["label"])}</b>: {e(s["v"]["blurb"])} '
+        f'{s["n"]} readable on {e(s["date"])}.</div></a>' for s in summaries)
+
+    # biggest divergence between verticals, for the standfirst
+    spread = []
+    for label, pred in measures:
+        vals = [share(s, pred) for s in summaries]
+        spread.append((max(vals) - min(vals), label, vals))
+    spread.sort(reverse=True)
+    top_gap = spread[0] if spread else (0, "", [])
+
+    page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Blocks AI Bots? AI crawler policy compared across industries</title>
+<meta name="description" content="Daily robots.txt audit comparing how different industries block AI crawlers: which AI answer engines they are open to and which training bots they block.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>{CSS}</style></head><body data-date="{e(date)}">
+<div class="topbar-outer"><nav class="topbar">
+<a class="wordmark" href="https://leefoot.com">Lee Foot<span class="dot">.</span></a>
+<div class="navlinks"><a href="https://leefoot.com/tools">Tools</a><a href="https://leefoot.com/services">Services</a><a class="cta" href="https://leefoot.com/contact">Book a Call</a></div>
+</nav></div>
+<div class="wrap">
+<div class="eyebrow">Updated daily, last run {e(date)}</div>
+<h1>Who blocks AI bots?</h1>
+<div class="vtabs">{tabs_html}</div>
+<p class="standfirst">A daily robots.txt audit of {sum(s["total"] for s in summaries)} sites across {len(summaries)} industries, tracking which AI answer engines each is open to and which AI training crawlers it blocks. Published studies of AI blocking almost all look at news alone; this compares industries on identical measures, collected the same way on the same day.</p>
+
+<div class="tiles">{cards}</div>
+<p class="tilenote">As of {e(date)}. Cite as: AI Bot Blocking Tracker, Lee Foot, {e(date)}.</p>
+
+<h2>Industry comparison</h2>
+<p class="standfirst">Share of readable sites in each industry. Unreadable sites (edge firewalls that refuse an identified robots.txt reader) are excluded from every percentage.</p>
+<div class="legend">{legend}</div>
+<div class="barchart">{"".join(rows)}</div>
+
+<h2>How to read this</h2>
+<ul>
+<li>This is <b>declared policy</b> (robots.txt), not enforcement, and it is not a measure of whether a site actually gets cited.</li>
+<li>Blocking a <b>training</b> crawler is a licensing decision and does not remove a site from AI answers. Blocking an <b>AI search</b> crawler does.</li>
+<li><b>Google AI Overviews and AI Mode are not in this data.</b> Their eligibility follows ordinary Googlebot indexing. Google-Extended governs Gemini training only.</li>
+<li>Each industry list is built the same way: candidate domains from public registries and enumeration, validated against the Tranco top 1M ranked-domain list, classified to the industry, then ranked. Per-industry pages carry the full method.</li>
+<li>Domain Rating by <a href="https://ahrefs.com/">Ahrefs</a>{f", last refreshed {e(dr_date)}" if dr_date else ""}.</li>
+</ul>
+
+<footer>Snapshots: {" ".join(f'<a href="{s["v"]["key"]}-latest.json">{s["v"]["key"]}</a>' for s in summaries)}. Dated snapshots in the <a href="https://github.com/searchsolved/ai-bot-blocking-tracker">repo</a> hold the full history. Built by <a href="https://leefoot.com">Lee Foot</a>. Domain Rating by <a href="https://ahrefs.com/">Ahrefs</a>.</footer>
+</div></body></html>'''
+
     with open(os.path.join(DOCS, "index.html"), "w") as f:
         f.write(page)
-    print(f"Wrote docs/index.html: {n} readable + {len(unreadable)} unreadable of {total}; "
-          f"tiles open3={open3} prime={prime} closed3={closed3} exception={exception}; "
-          f"changes={sum(len(v) for v in changes.values())}")
+    print(f"  index: {len(summaries)} verticals; widest gap {top_gap[0]} points on "
+          f"{top_gap[1]!r} {top_gap[2]}")
+
+
+def main():
+    dr, dr_date = load_dr()
+    checker = checker_url()
+    os.makedirs(DOCS, exist_ok=True)
+    summaries = []
+    for v in VERTICALS:
+        s = build_vertical(v, dr, dr_date, checker)
+        if s:
+            summaries.append(s)
+    if not summaries:
+        raise SystemExit("no vertical had any snapshots")
+    if len(summaries) > 1:
+        build_index(summaries, dr_date)
+    else:
+        # single vertical: it is the landing page
+        only = summaries[0]["v"]["key"]
+        with open(os.path.join(DOCS, "index.html"), "w") as f:
+            f.write(open(os.path.join(DOCS, f"{only}.html")).read())
+        print(f"  index: copy of {only}.html (only one vertical has data)")
 
 
 if __name__ == "__main__":
