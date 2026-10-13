@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-12T15:26:42.925598+00:00",
+ "run_at": "2026-10-13T14:14:37.755918+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -7583,7 +7583,7 @@
    "domain": "kentonline.co.uk",
    "fetched": "https://www.kentonline.co.uk/robots.txt",
    "error": null,
-   "edge": "km galileo @ mdc-webiis02",
+   "edge": "km galileo @ mdc-webiis01",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -16351,7 +16351,7 @@
    "domain": "bylinetimes.com",
    "fetched": "https://bylinetimes.com/robots.txt",
    "error": null,
-   "edge": "wpx cloud/chi02",
+   "edge": "wpx cloud/la02",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -19579,8 +19579,8 @@
     },
     "Google-Extended": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "google-extended",
+     "explicit": true,
      "paths": [
       "/backend/*"
      ]
@@ -19958,11 +19958,82 @@
   },
   {
    "domain": "energyvoice.com",
-   "fetched": null,
-   "error": "HTTP 403",
+   "fetched": "https://energyvoice.com/robots.txt",
+   "error": null,
    "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "CCBot": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "ClaudeBot": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "anthropic-ai": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Google-Extended": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Applebot-Extended": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Bytespider": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "OAI-SearchBot": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Claude-SearchBot": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "PerplexityBot": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "ChatGPT-User": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Claude-User": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    },
+    "Perplexity-User": {
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
+    }
+   },
    "region": "UK",
    "name": "Energy Voice",
    "dr": 73.0
@@ -22765,21 +22836,9 @@
      "explicit": true
     },
     "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/*.jsx$",
-      "*.jsx$",
-      "/*.jsx/",
-      "*.jsx?",
-      "/ads/",
-      "/aol/",
-      "/api/",
-      "/beta/",
-      "/browsers/",
-      "/cl/"
-     ]
+     "verdict": "blocked",
+     "via": "claude-user",
+     "explicit": true
     },
     "Perplexity-User": {
      "verdict": "blocked",
@@ -24071,7 +24130,7 @@
    "domain": "foxnews.com",
    "fetched": "https://www.foxnews.com/robots.txt",
    "error": null,
-   "edge": "nginx",
+   "edge": "fastly",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -24079,11 +24138,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "CCBot": {
@@ -24091,11 +24152,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "ClaudeBot": {
@@ -24103,11 +24166,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "anthropic-ai": {
@@ -24115,11 +24180,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Google-Extended": {
@@ -24127,11 +24194,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Applebot-Extended": {
@@ -24139,11 +24208,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Meta-ExternalAgent": {
@@ -24151,11 +24222,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Bytespider": {
@@ -24163,11 +24236,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "OAI-SearchBot": {
@@ -24175,11 +24250,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Claude-SearchBot": {
@@ -24187,11 +24264,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "PerplexityBot": {
@@ -24199,11 +24278,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "ChatGPT-User": {
@@ -24211,11 +24292,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Claude-User": {
@@ -24223,11 +24306,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     },
     "Perplexity-User": {
@@ -24235,11 +24320,13 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/api/article-search",
       "/search-results/",
       "/video-search/",
       "/printer_friendly_story/",
       "/printer_friendly_wires/",
-      "/wires/"
+      "/wires/",
+      "/xid"
      ]
     }
    },
@@ -24461,11 +24548,124 @@
   },
   {
    "domain": "time.com",
-   "fetched": null,
-   "error": "HTTP 406",
-   "edge": "unknown",
+   "fetched": "https://time.com/robots.txt",
+   "error": null,
+   "edge": "fastly",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/c/"
+     ]
+    }
+   },
    "region": "US",
    "name": "TIME",
    "dr": 92.0
@@ -53701,150 +53901,80 @@
   },
   {
    "domain": "bangordailynews.com",
-   "fetched": "https://www.bangordailynews.com/robots.txt",
+   "fetched": "https://cipa.bangordailynews.com/",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "nginx",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "ClaudeBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Applebot-Extended": {
-     "verdict": "blocked",
-     "via": "applebot-extended",
-     "explicit": true
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Meta-ExternalAgent": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Bytespider": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "OAI-SearchBot": {
-     "verdict": "allowed",
-     "via": "oai-searchbot",
-     "explicit": true
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Claude-SearchBot": {
-     "verdict": "allowed",
-     "via": "claude-searchbot",
-     "explicit": true
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "PerplexityBot": {
-     "verdict": "allowed",
-     "via": "perplexitybot",
-     "explicit": true
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/?s=",
-      "/page/*/?s=",
-      "/search/",
-      "/wp-json/",
-      "/?rest_route="
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     }
    },
    "region": "US",
@@ -56587,9 +56717,9 @@
       "/now_app/delete_account/",
       "/signup/",
       "/test-odc/",
-      "/tncms/gtm/",
-      "/tncms/csrf/",
-      "/tncms/openweb/*"
+      "/tncms/weather/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -56614,9 +56744,9 @@
       "/now_app/delete_account/",
       "/signup/",
       "/test-odc/",
-      "/tncms/gtm/",
-      "/tncms/csrf/",
-      "/tncms/openweb/*"
+      "/tncms/weather/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -56631,9 +56761,9 @@
       "/now_app/delete_account/",
       "/signup/",
       "/test-odc/",
-      "/tncms/gtm/",
-      "/tncms/csrf/",
-      "/tncms/openweb/*"
+      "/tncms/weather/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     }
    },
@@ -58811,7 +58941,7 @@
       "/subscribe/specoffer/",
       "/test/",
       "/users/",
-      "/tncms/openweb/*"
+      "/tncms/counter/"
      ]
     },
     "PerplexityBot": {
@@ -58838,7 +58968,7 @@
       "/subscribe/specoffer/",
       "/test/",
       "/users/",
-      "/tncms/openweb/*"
+      "/tncms/counter/"
      ]
     },
     "Perplexity-User": {
@@ -58855,7 +58985,7 @@
       "/subscribe/specoffer/",
       "/test/",
       "/users/",
-      "/tncms/openweb/*"
+      "/tncms/counter/"
      ]
     }
    },
@@ -65137,14 +65267,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/messaging/",
-      "/tncms/tax/",
       "/tncms/openid2/",
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
       "/tncms/weather/",
-      "/tncms/csrf/",
-      "/tncms/track/"
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -65164,14 +65294,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/messaging/",
-      "/tncms/tax/",
       "/tncms/openid2/",
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
       "/tncms/weather/",
-      "/tncms/csrf/",
-      "/tncms/track/"
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -65181,14 +65311,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/messaging/",
-      "/tncms/tax/",
       "/tncms/openid2/",
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
       "/tncms/weather/",
-      "/tncms/csrf/",
-      "/tncms/track/"
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     }
    },
@@ -68139,7 +68269,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "CCBot": {
@@ -68156,7 +68286,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "ClaudeBot": {
@@ -68173,7 +68303,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "anthropic-ai": {
@@ -68190,7 +68320,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Google-Extended": {
@@ -68207,7 +68337,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Applebot-Extended": {
@@ -68224,7 +68354,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -68241,7 +68371,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Bytespider": {
@@ -68258,7 +68388,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "OAI-SearchBot": {
@@ -68275,7 +68405,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Claude-SearchBot": {
@@ -68292,7 +68422,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "PerplexityBot": {
@@ -68309,7 +68439,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "ChatGPT-User": {
@@ -68326,7 +68456,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Claude-User": {
@@ -68343,7 +68473,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     },
     "Perplexity-User": {
@@ -68360,7 +68490,7 @@
       "/test/",
       "/test_aplus/",
       "/test_aplus/subscribe/",
-      "/tncms/counter/"
+      "/tncms/tax/"
      ]
     }
    },
@@ -70873,7 +71003,7 @@
       "/newsletter-templates/paid/editors-pick/",
       "/newsletter-templates/paid/short-list/",
       "/nowapp/delete_account/",
-      "/tncms/auth/",
+      "/tncms/gtm/",
       "/tncms/csrf/"
      ]
     },
@@ -70900,7 +71030,7 @@
       "/newsletter-templates/paid/editors-pick/",
       "/newsletter-templates/paid/short-list/",
       "/nowapp/delete_account/",
-      "/tncms/auth/",
+      "/tncms/gtm/",
       "/tncms/csrf/"
      ]
     },
@@ -70917,7 +71047,7 @@
       "/newsletter-templates/paid/editors-pick/",
       "/newsletter-templates/paid/short-list/",
       "/nowapp/delete_account/",
-      "/tncms/auth/",
+      "/tncms/gtm/",
       "/tncms/csrf/"
      ]
     }
@@ -72248,9 +72378,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "CCBot": {
@@ -72265,9 +72395,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "ClaudeBot": {
@@ -72282,9 +72412,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "anthropic-ai": {
@@ -72299,9 +72429,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Google-Extended": {
@@ -72316,9 +72446,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Applebot-Extended": {
@@ -72333,9 +72463,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Meta-ExternalAgent": {
@@ -72350,9 +72480,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Bytespider": {
@@ -72367,9 +72497,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "OAI-SearchBot": {
@@ -72384,9 +72514,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Claude-SearchBot": {
@@ -72401,9 +72531,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "PerplexityBot": {
@@ -72418,9 +72548,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "ChatGPT-User": {
@@ -72435,9 +72565,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Claude-User": {
@@ -72452,9 +72582,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     },
     "Perplexity-User": {
@@ -72469,9 +72599,9 @@
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/weather/",
-      "/tncms/block/",
-      "/tncms/messaging/"
+      "/tncms/openid2/",
+      "/tncms/dmp/",
+      "/tncms/openweb/*"
      ]
     }
    },
@@ -73041,11 +73171,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "CCBot": {
@@ -73058,11 +73188,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "ClaudeBot": {
@@ -73075,11 +73205,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "anthropic-ai": {
@@ -73092,11 +73222,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Google-Extended": {
@@ -73109,11 +73239,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Applebot-Extended": {
@@ -73126,11 +73256,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -73143,11 +73273,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Bytespider": {
@@ -73160,11 +73290,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "OAI-SearchBot": {
@@ -73177,11 +73307,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Claude-SearchBot": {
@@ -73194,11 +73324,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "PerplexityBot": {
@@ -73211,11 +73341,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "ChatGPT-User": {
@@ -73228,11 +73358,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Claude-User": {
@@ -73245,11 +73375,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     },
     "Perplexity-User": {
@@ -73262,11 +73392,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/media/",
-      "/tncms/csrf/",
-      "/tncms/webservice/",
       "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/messaging/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/counter/"
      ]
     }
    },
@@ -73377,7 +73507,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "CCBot": {
@@ -73394,7 +73524,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "ClaudeBot": {
@@ -73411,7 +73541,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "anthropic-ai": {
@@ -73428,7 +73558,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Google-Extended": {
@@ -73445,7 +73575,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Applebot-Extended": {
@@ -73462,7 +73592,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -73479,7 +73609,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Bytespider": {
@@ -73496,7 +73626,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "OAI-SearchBot": {
@@ -73513,7 +73643,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Claude-SearchBot": {
@@ -73530,7 +73660,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "PerplexityBot": {
@@ -73547,7 +73677,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "ChatGPT-User": {
@@ -73564,7 +73694,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Claude-User": {
@@ -73581,7 +73711,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     },
     "Perplexity-User": {
@@ -73598,7 +73728,7 @@
       "/site-menus/",
       "/template/",
       "/test/",
-      "/tncms/media/"
+      "/tncms/counter/"
      ]
     }
    },
@@ -75047,11 +75177,11 @@
       "/best-of-kern/scrape/",
       "/calendar/",
       "/test/",
-      "/tncms/gtm/",
       "/tncms/csrf/",
-      "/tncms/openweb/*",
+      "/tncms/auth/",
+      "/tncms/openid2/",
       "/tncms/search/",
-      "/tncms/tax/"
+      "/tncms/openweb/*"
      ]
     },
     "PerplexityBot": {
@@ -75074,11 +75204,11 @@
       "/best-of-kern/scrape/",
       "/calendar/",
       "/test/",
-      "/tncms/gtm/",
       "/tncms/csrf/",
-      "/tncms/openweb/*",
+      "/tncms/auth/",
+      "/tncms/openid2/",
       "/tncms/search/",
-      "/tncms/tax/"
+      "/tncms/openweb/*"
      ]
     },
     "Perplexity-User": {
@@ -75091,11 +75221,11 @@
       "/best-of-kern/scrape/",
       "/calendar/",
       "/test/",
-      "/tncms/gtm/",
       "/tncms/csrf/",
-      "/tncms/openweb/*",
+      "/tncms/auth/",
+      "/tncms/openid2/",
       "/tncms/search/",
-      "/tncms/tax/"
+      "/tncms/openweb/*"
      ]
     }
    },
@@ -75866,14 +75996,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/auth/",
-      "/tncms/admin/",
       "/tncms/media/",
-      "/tncms/gtm/",
-      "/tncms/block/",
+      "/tncms/track/",
       "/tncms/dmp/",
-      "/tncms/counter/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     },
     "PerplexityBot": {
@@ -75893,14 +76023,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/auth/",
-      "/tncms/admin/",
       "/tncms/media/",
-      "/tncms/gtm/",
-      "/tncms/block/",
+      "/tncms/track/",
       "/tncms/dmp/",
-      "/tncms/counter/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     },
     "Perplexity-User": {
@@ -75910,14 +76040,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/auth/",
-      "/tncms/admin/",
       "/tncms/media/",
-      "/tncms/gtm/",
-      "/tncms/block/",
+      "/tncms/track/",
       "/tncms/dmp/",
-      "/tncms/counter/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     }
    },
@@ -76545,8 +76675,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "CCBot": {
@@ -76562,8 +76692,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "ClaudeBot": {
@@ -76579,8 +76709,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "anthropic-ai": {
@@ -76596,8 +76726,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Google-Extended": {
@@ -76613,8 +76743,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Applebot-Extended": {
@@ -76630,8 +76760,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -76647,8 +76777,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Bytespider": {
@@ -76664,8 +76794,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "OAI-SearchBot": {
@@ -76681,8 +76811,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Claude-SearchBot": {
@@ -76698,8 +76828,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -76715,8 +76845,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "ChatGPT-User": {
@@ -76732,8 +76862,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Claude-User": {
@@ -76749,8 +76879,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -76766,8 +76896,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/counter/",
-      "/tncms/webservice/"
+      "/tncms/csrf/",
+      "/tncms/auth/"
      ]
     }
    },
@@ -78212,7 +78342,7 @@
       "/native/youth_sports/",
       "/nowapp/delete_account/",
       "/subscriptions/test/",
-      "/tncms/search/"
+      "/tncms/webservice/"
      ]
     },
     "PerplexityBot": {
@@ -78239,7 +78369,7 @@
       "/native/youth_sports/",
       "/nowapp/delete_account/",
       "/subscriptions/test/",
-      "/tncms/search/"
+      "/tncms/webservice/"
      ]
     },
     "Perplexity-User": {
@@ -78256,7 +78386,7 @@
       "/native/youth_sports/",
       "/nowapp/delete_account/",
       "/subscriptions/test/",
-      "/tncms/search/"
+      "/tncms/webservice/"
      ]
     }
    },
@@ -80490,11 +80620,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "CCBot": {
@@ -80507,11 +80637,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "ClaudeBot": {
@@ -80524,11 +80654,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "anthropic-ai": {
@@ -80541,11 +80671,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Google-Extended": {
@@ -80558,11 +80688,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Applebot-Extended": {
@@ -80575,11 +80705,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -80592,11 +80722,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Bytespider": {
@@ -80609,11 +80739,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "OAI-SearchBot": {
@@ -80626,11 +80756,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Claude-SearchBot": {
@@ -80643,11 +80773,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "PerplexityBot": {
@@ -80660,11 +80790,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "ChatGPT-User": {
@@ -80677,11 +80807,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Claude-User": {
@@ -80694,11 +80824,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     },
     "Perplexity-User": {
@@ -80711,11 +80841,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
+      "/tncms/media/",
+      "/tncms/webservice/",
+      "/tncms/auth/",
       "/tncms/openweb/*",
-      "/tncms/search/",
-      "/tncms/gtm/"
+      "/tncms/openid2/"
      ]
     }
    },
@@ -81327,7 +81457,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "CCBot": {
@@ -81344,7 +81474,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "ClaudeBot": {
@@ -81361,7 +81491,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "anthropic-ai": {
@@ -81378,7 +81508,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Google-Extended": {
@@ -81395,7 +81525,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Applebot-Extended": {
@@ -81412,7 +81542,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -81429,7 +81559,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Bytespider": {
@@ -81446,7 +81576,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "OAI-SearchBot": {
@@ -81463,7 +81593,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Claude-SearchBot": {
@@ -81480,7 +81610,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "PerplexityBot": {
@@ -81497,7 +81627,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "ChatGPT-User": {
@@ -81514,7 +81644,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Claude-User": {
@@ -81531,7 +81661,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     },
     "Perplexity-User": {
@@ -81548,7 +81678,7 @@
       "/template/",
       "/test/",
       "/topic/",
-      "/tncms/media/"
+      "/tncms/csrf/"
      ]
     }
    },
@@ -82179,14 +82309,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/dmp/",
-      "/tncms/openid2/",
-      "/tncms/counter/",
-      "/tncms/gtm/",
-      "/tncms/openweb/*",
       "/tncms/track/",
-      "/tncms/webservice/"
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/",
+      "/tncms/csrf/",
+      "/tncms/auth/",
+      "/tncms/openweb/*",
+      "/tncms/openid2/"
      ]
     },
     "PerplexityBot": {
@@ -82206,14 +82336,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/dmp/",
-      "/tncms/openid2/",
-      "/tncms/counter/",
-      "/tncms/gtm/",
-      "/tncms/openweb/*",
       "/tncms/track/",
-      "/tncms/webservice/"
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/",
+      "/tncms/csrf/",
+      "/tncms/auth/",
+      "/tncms/openweb/*",
+      "/tncms/openid2/"
      ]
     },
     "Perplexity-User": {
@@ -82223,14 +82353,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/dmp/",
-      "/tncms/openid2/",
-      "/tncms/counter/",
-      "/tncms/gtm/",
-      "/tncms/openweb/*",
       "/tncms/track/",
-      "/tncms/webservice/"
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/",
+      "/tncms/csrf/",
+      "/tncms/auth/",
+      "/tncms/openweb/*",
+      "/tncms/openid2/"
      ]
     }
    },
@@ -82293,12 +82423,12 @@
       "/tncms/tracking/",
       "/_services/",
       "/nowapp/delete_account/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
+      "/tncms/openid2/",
       "/tncms/track/",
-      "/tncms/auth/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/",
+      "/tncms/media/",
       "/tncms/webservice/"
      ]
     },
@@ -82310,12 +82440,12 @@
       "/tncms/tracking/",
       "/_services/",
       "/nowapp/delete_account/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
+      "/tncms/openid2/",
       "/tncms/track/",
-      "/tncms/auth/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/",
+      "/tncms/media/",
       "/tncms/webservice/"
      ]
     },
@@ -82327,12 +82457,12 @@
       "/tncms/tracking/",
       "/_services/",
       "/nowapp/delete_account/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
+      "/tncms/openid2/",
       "/tncms/track/",
-      "/tncms/auth/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/",
+      "/tncms/media/",
       "/tncms/webservice/"
      ]
     },
@@ -82344,12 +82474,12 @@
       "/tncms/tracking/",
       "/_services/",
       "/nowapp/delete_account/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
+      "/tncms/openid2/",
       "/tncms/track/",
-      "/tncms/auth/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/",
+      "/tncms/media/",
       "/tncms/webservice/"
      ]
     },
@@ -82361,12 +82491,12 @@
       "/tncms/tracking/",
       "/_services/",
       "/nowapp/delete_account/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
+      "/tncms/openid2/",
       "/tncms/track/",
-      "/tncms/auth/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/",
+      "/tncms/media/",
       "/tncms/webservice/"
      ]
     },
@@ -82378,12 +82508,12 @@
       "/tncms/tracking/",
       "/_services/",
       "/nowapp/delete_account/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
+      "/tncms/openid2/",
       "/tncms/track/",
-      "/tncms/auth/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/",
+      "/tncms/media/",
       "/tncms/webservice/"
      ]
     }
@@ -83075,9 +83205,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "CCBot": {
@@ -83092,9 +83222,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "ClaudeBot": {
@@ -83109,9 +83239,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "anthropic-ai": {
@@ -83126,9 +83256,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Google-Extended": {
@@ -83143,9 +83273,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Applebot-Extended": {
@@ -83160,9 +83290,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -83177,9 +83307,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Bytespider": {
@@ -83194,9 +83324,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "OAI-SearchBot": {
@@ -83211,9 +83341,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-SearchBot": {
@@ -83228,9 +83358,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -83245,9 +83375,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "ChatGPT-User": {
@@ -83262,9 +83392,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-User": {
@@ -83279,9 +83409,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -83296,9 +83426,9 @@
       "/feeder/",
       "/nowapp/delete_account/",
       "/template/",
-      "/tncms/openid2/",
-      "/tncms/track/",
-      "/tncms/counter/"
+      "/tncms/gtm/",
+      "/tncms/media/",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -83807,7 +83937,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "CCBot": {
@@ -83824,7 +83954,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "ClaudeBot": {
@@ -83841,7 +83971,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "anthropic-ai": {
@@ -83858,7 +83988,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Google-Extended": {
@@ -83875,7 +84005,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Applebot-Extended": {
@@ -83892,7 +84022,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -83909,7 +84039,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Bytespider": {
@@ -83926,7 +84056,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "OAI-SearchBot": {
@@ -83943,7 +84073,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Claude-SearchBot": {
@@ -83960,7 +84090,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "PerplexityBot": {
@@ -83977,7 +84107,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "ChatGPT-User": {
@@ -83994,7 +84124,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Claude-User": {
@@ -84011,7 +84141,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     },
     "Perplexity-User": {
@@ -84028,7 +84158,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/"
+      "/tncms/gtm/"
      ]
     }
    },
@@ -84241,9 +84371,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "CCBot": {
@@ -84258,9 +84388,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "ClaudeBot": {
@@ -84275,9 +84405,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "anthropic-ai": {
@@ -84292,9 +84422,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Google-Extended": {
@@ -84309,9 +84439,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Applebot-Extended": {
@@ -84326,9 +84456,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -84343,9 +84473,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Bytespider": {
@@ -84360,9 +84490,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "OAI-SearchBot": {
@@ -84377,9 +84507,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Claude-SearchBot": {
@@ -84394,9 +84524,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "PerplexityBot": {
@@ -84411,9 +84541,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "ChatGPT-User": {
@@ -84428,9 +84558,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Claude-User": {
@@ -84445,9 +84575,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     },
     "Perplexity-User": {
@@ -84462,9 +84592,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/template/",
+      "/tncms/openweb/*",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/block/"
+      "/tncms/counter/"
      ]
     }
    },
@@ -85452,11 +85582,11 @@
       "/news/asia_pacific/",
       "/news/local/covid/",
       "/nowapp/delete_account/",
-      "/tncms/track/",
+      "/tncms/weather/",
       "/tncms/block/",
-      "/tncms/search/",
-      "/tncms/media/",
-      "/tncms/csrf/"
+      "/tncms/messaging/",
+      "/tncms/webservice/",
+      "/tncms/track/"
      ]
     },
     "PerplexityBot": {
@@ -85479,11 +85609,11 @@
       "/news/asia_pacific/",
       "/news/local/covid/",
       "/nowapp/delete_account/",
-      "/tncms/track/",
+      "/tncms/weather/",
       "/tncms/block/",
-      "/tncms/search/",
-      "/tncms/media/",
-      "/tncms/csrf/"
+      "/tncms/messaging/",
+      "/tncms/webservice/",
+      "/tncms/track/"
      ]
     },
     "Perplexity-User": {
@@ -85496,11 +85626,11 @@
       "/news/asia_pacific/",
       "/news/local/covid/",
       "/nowapp/delete_account/",
-      "/tncms/track/",
+      "/tncms/weather/",
       "/tncms/block/",
-      "/tncms/search/",
-      "/tncms/media/",
-      "/tncms/csrf/"
+      "/tncms/messaging/",
+      "/tncms/webservice/",
+      "/tncms/track/"
      ]
     }
    },
@@ -85522,14 +85652,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "CCBot": {
@@ -85544,14 +85674,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "anthropic-ai": {
@@ -85561,14 +85691,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Google-Extended": {
@@ -85578,14 +85708,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Applebot-Extended": {
@@ -85595,14 +85725,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -85612,14 +85742,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Bytespider": {
@@ -85634,14 +85764,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Claude-SearchBot": {
@@ -85651,14 +85781,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "PerplexityBot": {
@@ -85668,14 +85798,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "ChatGPT-User": {
@@ -85685,14 +85815,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Claude-User": {
@@ -85702,14 +85832,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     },
     "Perplexity-User": {
@@ -85719,14 +85849,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/admin/",
-      "/tncms/counter/",
-      "/tncms/weather/",
-      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/track/"
+      "/tncms/csrf/",
+      "/tncms/openweb/*",
+      "/tncms/search/",
+      "/tncms/tax/",
+      "/tncms/admin/",
+      "/tncms/openid2/",
+      "/tncms/media/"
      ]
     }
    },
@@ -85915,11 +86045,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "CCBot": {
@@ -85932,11 +86062,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "ClaudeBot": {
@@ -85949,11 +86079,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "anthropic-ai": {
@@ -85966,11 +86096,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Google-Extended": {
@@ -85983,11 +86113,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Applebot-Extended": {
@@ -86000,11 +86130,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -86017,11 +86147,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Bytespider": {
@@ -86034,11 +86164,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "OAI-SearchBot": {
@@ -86051,11 +86181,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-SearchBot": {
@@ -86068,11 +86198,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -86085,11 +86215,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "ChatGPT-User": {
@@ -86102,11 +86232,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-User": {
@@ -86119,11 +86249,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -86136,11 +86266,11 @@
       "/apgstate/",
       "/nonsub-register/",
       "/test/",
-      "/tncms/tax/",
-      "/tncms/media/",
+      "/tncms/csrf/",
       "/tncms/gtm/",
-      "/tncms/admin/",
-      "/tncms/counter/"
+      "/tncms/tax/",
+      "/tncms/openid2/",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -86210,11 +86340,11 @@
       "/newsletter-templates/test/",
       "/nowapp/delete_account/",
       "/pelcro-test/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
+      "/tncms/counter/",
+      "/tncms/webservice/",
+      "/tncms/search/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/openid2/"
+      "/tncms/tax/"
      ]
     },
     "PerplexityBot": {
@@ -86237,11 +86367,11 @@
       "/newsletter-templates/test/",
       "/nowapp/delete_account/",
       "/pelcro-test/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
+      "/tncms/counter/",
+      "/tncms/webservice/",
+      "/tncms/search/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/openid2/"
+      "/tncms/tax/"
      ]
     },
     "Perplexity-User": {
@@ -86254,11 +86384,11 @@
       "/newsletter-templates/test/",
       "/nowapp/delete_account/",
       "/pelcro-test/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
+      "/tncms/counter/",
+      "/tncms/webservice/",
+      "/tncms/search/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/openid2/"
+      "/tncms/tax/"
      ]
     }
    },
@@ -86697,11 +86827,11 @@
       "/archives/",
       "/other/",
       "/test/",
-      "/tncms/openweb/*",
-      "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/auth/"
+      "/tncms/admin/",
+      "/tncms/dmp/",
+      "/tncms/openid2/",
+      "/tncms/counter/",
+      "/tncms/gtm/"
      ]
     },
     "PerplexityBot": {
@@ -86724,11 +86854,11 @@
       "/archives/",
       "/other/",
       "/test/",
-      "/tncms/openweb/*",
-      "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/auth/"
+      "/tncms/admin/",
+      "/tncms/dmp/",
+      "/tncms/openid2/",
+      "/tncms/counter/",
+      "/tncms/gtm/"
      ]
     },
     "Perplexity-User": {
@@ -86741,11 +86871,11 @@
       "/archives/",
       "/other/",
       "/test/",
-      "/tncms/openweb/*",
-      "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/auth/"
+      "/tncms/admin/",
+      "/tncms/dmp/",
+      "/tncms/openid2/",
+      "/tncms/counter/",
+      "/tncms/gtm/"
      ]
     }
    },
@@ -87010,13 +87140,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/sports/olympics/",
-      "/tncms/search/",
+      "/tncms/weather/",
+      "/tncms/block/",
       "/tncms/messaging/",
+      "/tncms/webservice/",
+      "/tncms/track/",
       "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/track/"
+      "/tncms/openweb/*"
      ]
     },
     "PerplexityBot": {
@@ -87037,13 +87167,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/sports/olympics/",
-      "/tncms/search/",
+      "/tncms/weather/",
+      "/tncms/block/",
       "/tncms/messaging/",
+      "/tncms/webservice/",
+      "/tncms/track/",
       "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/track/"
+      "/tncms/openweb/*"
      ]
     },
     "Perplexity-User": {
@@ -87054,13 +87184,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/sports/olympics/",
-      "/tncms/search/",
+      "/tncms/weather/",
+      "/tncms/block/",
       "/tncms/messaging/",
+      "/tncms/webservice/",
+      "/tncms/track/",
       "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/dmp/",
-      "/tncms/track/"
+      "/tncms/openweb/*"
      ]
     }
    },
@@ -87933,8 +88063,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "CCBot": {
@@ -87950,8 +88080,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "ClaudeBot": {
@@ -87967,8 +88097,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "anthropic-ai": {
@@ -87984,8 +88114,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Google-Extended": {
@@ -88001,8 +88131,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Applebot-Extended": {
@@ -88018,8 +88148,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -88035,8 +88165,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Bytespider": {
@@ -88052,8 +88182,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "OAI-SearchBot": {
@@ -88069,8 +88199,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-SearchBot": {
@@ -88086,8 +88216,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -88103,8 +88233,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "ChatGPT-User": {
@@ -88120,8 +88250,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-User": {
@@ -88137,8 +88267,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -88154,8 +88284,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/"
+      "/tncms/block/",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -89066,8 +89196,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "CCBot": {
@@ -89083,8 +89213,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "ClaudeBot": {
@@ -89100,8 +89230,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "anthropic-ai": {
@@ -89117,8 +89247,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Google-Extended": {
@@ -89134,8 +89264,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Applebot-Extended": {
@@ -89151,8 +89281,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -89168,8 +89298,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Bytespider": {
@@ -89185,8 +89315,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "OAI-SearchBot": {
@@ -89202,8 +89332,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Claude-SearchBot": {
@@ -89219,8 +89349,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "PerplexityBot": {
@@ -89236,8 +89366,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "ChatGPT-User": {
@@ -89253,8 +89383,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Claude-User": {
@@ -89270,8 +89400,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Perplexity-User": {
@@ -89287,8 +89417,8 @@
       "/test/",
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
-      "/tncms/counter/",
-      "/tncms/block/"
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     }
    },
@@ -89324,11 +89454,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "CCBot": {
@@ -89341,11 +89471,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "ClaudeBot": {
@@ -89358,11 +89488,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "anthropic-ai": {
@@ -89375,11 +89505,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Google-Extended": {
@@ -89392,11 +89522,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Applebot-Extended": {
@@ -89409,11 +89539,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -89426,11 +89556,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Bytespider": {
@@ -89443,11 +89573,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "OAI-SearchBot": {
@@ -89460,11 +89590,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Claude-SearchBot": {
@@ -89477,11 +89607,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "PerplexityBot": {
@@ -89494,11 +89624,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "ChatGPT-User": {
@@ -89511,11 +89641,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Claude-User": {
@@ -89528,11 +89658,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     },
     "Perplexity-User": {
@@ -89545,11 +89675,11 @@
       "/test/",
       "/newsletters/arts_and_entertainment/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
       "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/openid2/"
      ]
     }
    },
@@ -89733,12 +89863,12 @@
       "/_services/",
       "/nowapp/delete_account/",
       "/video/live/live_noindex/",
+      "/tncms/tax/",
       "/tncms/media/",
-      "/tncms/track/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*",
+      "/tncms/gtm/",
       "/tncms/admin/",
-      "/tncms/block/"
+      "/tncms/counter/",
+      "/tncms/csrf/"
      ]
     },
     "PerplexityBot": {
@@ -89760,12 +89890,12 @@
       "/_services/",
       "/nowapp/delete_account/",
       "/video/live/live_noindex/",
+      "/tncms/tax/",
       "/tncms/media/",
-      "/tncms/track/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*",
+      "/tncms/gtm/",
       "/tncms/admin/",
-      "/tncms/block/"
+      "/tncms/counter/",
+      "/tncms/csrf/"
      ]
     },
     "Perplexity-User": {
@@ -89777,12 +89907,12 @@
       "/_services/",
       "/nowapp/delete_account/",
       "/video/live/live_noindex/",
+      "/tncms/tax/",
       "/tncms/media/",
-      "/tncms/track/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*",
+      "/tncms/gtm/",
       "/tncms/admin/",
-      "/tncms/block/"
+      "/tncms/counter/",
+      "/tncms/csrf/"
      ]
     }
    },
@@ -90634,9 +90764,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "CCBot": {
@@ -90651,9 +90781,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "ClaudeBot": {
@@ -90668,9 +90798,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "anthropic-ai": {
@@ -90685,9 +90815,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Google-Extended": {
@@ -90702,9 +90832,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Applebot-Extended": {
@@ -90719,9 +90849,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -90736,9 +90866,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Bytespider": {
@@ -90753,9 +90883,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "OAI-SearchBot": {
@@ -90770,9 +90900,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Claude-SearchBot": {
@@ -90787,9 +90917,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "PerplexityBot": {
@@ -90804,9 +90934,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "ChatGPT-User": {
@@ -90821,9 +90951,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Claude-User": {
@@ -90838,9 +90968,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     },
     "Perplexity-User": {
@@ -90855,9 +90985,9 @@
       "/site/forms/printrequest/",
       "/test/",
       "/test_homepage/",
-      "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*"
+      "/tncms/admin/",
+      "/tncms/counter/",
+      "/tncms/weather/"
      ]
     }
    },
@@ -90951,9 +91081,9 @@
       "/exclusives/extra/everydayheroes/",
       "/place_an_ad/",
       "/test/homepage_test/",
-      "/tncms/openid2/",
-      "/tncms/tax/",
-      "/tncms/messaging/"
+      "/tncms/weather/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -90978,9 +91108,9 @@
       "/exclusives/extra/everydayheroes/",
       "/place_an_ad/",
       "/test/homepage_test/",
-      "/tncms/openid2/",
-      "/tncms/tax/",
-      "/tncms/messaging/"
+      "/tncms/weather/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -90995,9 +91125,9 @@
       "/exclusives/extra/everydayheroes/",
       "/place_an_ad/",
       "/test/homepage_test/",
-      "/tncms/openid2/",
-      "/tncms/tax/",
-      "/tncms/messaging/"
+      "/tncms/weather/",
+      "/tncms/webservice/",
+      "/tncms/auth/"
      ]
     }
    },
@@ -91294,11 +91424,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "CCBot": {
@@ -91311,11 +91441,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "ClaudeBot": {
@@ -91328,11 +91458,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "anthropic-ai": {
@@ -91345,11 +91475,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Google-Extended": {
@@ -91362,11 +91492,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Applebot-Extended": {
@@ -91379,11 +91509,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -91396,11 +91526,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Bytespider": {
@@ -91413,11 +91543,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "OAI-SearchBot": {
@@ -91430,11 +91560,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Claude-SearchBot": {
@@ -91447,11 +91577,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "PerplexityBot": {
@@ -91464,11 +91594,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "ChatGPT-User": {
@@ -91481,11 +91611,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Claude-User": {
@@ -91498,11 +91628,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     },
     "Perplexity-User": {
@@ -91515,11 +91645,11 @@
       "/exclusive/get-healthy/",
       "/exclusive/subscription/",
       "/nowapp/delete_account/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
-      "/tncms/tax/",
       "/tncms/openid2/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/weather/"
      ]
     }
    },
@@ -91775,7 +91905,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "CCBot": {
@@ -91792,7 +91922,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "ClaudeBot": {
@@ -91809,7 +91939,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "anthropic-ai": {
@@ -91826,7 +91956,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Google-Extended": {
@@ -91843,7 +91973,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Applebot-Extended": {
@@ -91860,7 +91990,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -91877,7 +92007,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Bytespider": {
@@ -91894,7 +92024,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "OAI-SearchBot": {
@@ -91911,7 +92041,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Claude-SearchBot": {
@@ -91928,7 +92058,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "PerplexityBot": {
@@ -91945,7 +92075,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "ChatGPT-User": {
@@ -91962,7 +92092,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Claude-User": {
@@ -91979,7 +92109,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     },
     "Perplexity-User": {
@@ -91996,7 +92126,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/"
+      "/tncms/media/"
      ]
     }
    },
@@ -93275,7 +93405,7 @@
    "domain": "unicornriot.ninja",
    "fetched": "https://unicornriot.ninja/robots.txt",
    "error": null,
-   "edge": "bunnycdn-msp1-1084",
+   "edge": "bunnycdn-la1-852",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -94237,7 +94367,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "CCBot": {
@@ -94254,7 +94384,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "ClaudeBot": {
@@ -94271,7 +94401,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "anthropic-ai": {
@@ -94288,7 +94418,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Google-Extended": {
@@ -94305,7 +94435,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Applebot-Extended": {
@@ -94322,7 +94452,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -94339,7 +94469,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Bytespider": {
@@ -94356,7 +94486,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "OAI-SearchBot": {
@@ -94373,7 +94503,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Claude-SearchBot": {
@@ -94390,7 +94520,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -94407,7 +94537,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "ChatGPT-User": {
@@ -94424,7 +94554,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Claude-User": {
@@ -94441,7 +94571,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -94458,7 +94588,7 @@
       "/nowapp/delete_account/",
       "/test/",
       "/topic/",
-      "/tncms/gtm/"
+      "/tncms/auth/"
      ]
     }
    },
@@ -95087,9 +95217,9 @@
       "/print/",
       "/special/river_cities/",
       "/sports_print/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/"
+      "/tncms/search/",
+      "/tncms/messaging/",
+      "/tncms/tax/"
      ]
     },
     "PerplexityBot": {
@@ -95114,9 +95244,9 @@
       "/print/",
       "/special/river_cities/",
       "/sports_print/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/"
+      "/tncms/search/",
+      "/tncms/messaging/",
+      "/tncms/tax/"
      ]
     },
     "Perplexity-User": {
@@ -95131,9 +95261,9 @@
       "/print/",
       "/special/river_cities/",
       "/sports_print/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/"
+      "/tncms/search/",
+      "/tncms/messaging/",
+      "/tncms/tax/"
      ]
     }
    },
@@ -95300,11 +95430,82 @@
   },
   {
    "domain": "vaildaily.com",
-   "fetched": null,
-   "error": "HTTP 403",
-   "edge": "unknown",
+   "fetched": "https://www.vaildaily.com/robots.txt",
+   "error": null,
+   "edge": "cloudfront",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "blocked",
+     "via": "gptbot",
+     "explicit": true
+    },
+    "CCBot": {
+     "verdict": "blocked",
+     "via": "ccbot",
+     "explicit": true
+    },
+    "ClaudeBot": {
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
+    },
+    "anthropic-ai": {
+     "verdict": "blocked",
+     "via": "anthropic-ai",
+     "explicit": true
+    },
+    "Google-Extended": {
+     "verdict": "blocked",
+     "via": "google-extended",
+     "explicit": true
+    },
+    "Applebot-Extended": {
+     "verdict": "blocked",
+     "via": "applebot-extended",
+     "explicit": true
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
+    },
+    "Bytespider": {
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
+    },
+    "OAI-SearchBot": {
+     "verdict": "blocked",
+     "via": "oai-searchbot",
+     "explicit": true
+    },
+    "Claude-SearchBot": {
+     "verdict": "blocked",
+     "via": "claude-searchbot",
+     "explicit": true
+    },
+    "PerplexityBot": {
+     "verdict": "blocked",
+     "via": "perplexitybot",
+     "explicit": true
+    },
+    "ChatGPT-User": {
+     "verdict": "blocked",
+     "via": "chatgpt-user",
+     "explicit": true
+    },
+    "Claude-User": {
+     "verdict": "blocked",
+     "via": "claude-user",
+     "explicit": true
+    },
+    "Perplexity-User": {
+     "verdict": "blocked",
+     "via": "perplexity-user",
+     "explicit": true
+    }
+   },
    "region": "US",
    "name": "Vail Daily",
    "dr": 74.0
@@ -95445,10 +95646,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "CCBot": {
@@ -95462,10 +95663,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "ClaudeBot": {
@@ -95479,10 +95680,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "anthropic-ai": {
@@ -95496,10 +95697,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Google-Extended": {
@@ -95513,10 +95714,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Applebot-Extended": {
@@ -95530,10 +95731,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -95547,10 +95748,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Bytespider": {
@@ -95564,10 +95765,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "OAI-SearchBot": {
@@ -95581,10 +95782,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Claude-SearchBot": {
@@ -95598,10 +95799,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "PerplexityBot": {
@@ -95615,10 +95816,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "ChatGPT-User": {
@@ -95632,10 +95833,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Claude-User": {
@@ -95649,10 +95850,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     },
     "Perplexity-User": {
@@ -95666,10 +95867,10 @@
       "/newsletters/",
       "/subscribe/app/",
       "/test/",
-      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/track/",
-      "/tncms/admin/"
+      "/tncms/webservice/",
+      "/tncms/csrf/"
      ]
     }
    },
@@ -95709,11 +95910,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     },
     "Google-Extended": {
@@ -95746,11 +95947,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     },
     "Claude-SearchBot": {
@@ -95763,11 +95964,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     },
     "PerplexityBot": {
@@ -95780,11 +95981,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     },
     "ChatGPT-User": {
@@ -95797,11 +95998,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     },
     "Claude-User": {
@@ -95814,11 +96015,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     },
     "Perplexity-User": {
@@ -95831,11 +96032,11 @@
       "/constant_contact/",
       "/native/delete_account/",
       "/news/documents/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/",
-      "/tncms/openweb/*"
+      "/tncms/openweb/*",
+      "/tncms/track/",
+      "/tncms/webservice/",
+      "/tncms/admin/",
+      "/tncms/tax/"
      ]
     }
    },
@@ -95902,14 +96103,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
-      "/tncms/track/",
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/",
+      "/tncms/search/",
       "/tncms/auth/",
-      "/tncms/webservice/",
-      "/tncms/admin/"
+      "/tncms/track/",
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "PerplexityBot": {
@@ -95929,14 +96130,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
-      "/tncms/track/",
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/",
+      "/tncms/search/",
       "/tncms/auth/",
-      "/tncms/webservice/",
-      "/tncms/admin/"
+      "/tncms/track/",
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     },
     "Perplexity-User": {
@@ -95946,14 +96147,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/gtm/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/csrf/",
-      "/tncms/track/",
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/",
+      "/tncms/search/",
       "/tncms/auth/",
-      "/tncms/webservice/",
-      "/tncms/admin/"
+      "/tncms/track/",
+      "/tncms/gtm/",
+      "/tncms/dmp/"
      ]
     }
    },
@@ -97131,8 +97332,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "CCBot": {
@@ -97148,8 +97349,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "ClaudeBot": {
@@ -97165,8 +97366,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "anthropic-ai": {
@@ -97182,8 +97383,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Google-Extended": {
@@ -97199,8 +97400,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Applebot-Extended": {
@@ -97216,8 +97417,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -97233,8 +97434,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Bytespider": {
@@ -97250,8 +97451,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "OAI-SearchBot": {
@@ -97267,8 +97468,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Claude-SearchBot": {
@@ -97284,8 +97485,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -97301,8 +97502,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "ChatGPT-User": {
@@ -97318,8 +97519,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Claude-User": {
@@ -97335,8 +97536,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -97352,8 +97553,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -98009,14 +98210,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/block/",
+      "/tncms/openid2/",
       "/tncms/webservice/",
       "/tncms/search/",
-      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/track/",
-      "/tncms/admin/",
-      "/tncms/auth/"
+      "/tncms/counter/",
+      "/tncms/admin/"
      ]
     },
     "PerplexityBot": {
@@ -98036,14 +98237,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/block/",
+      "/tncms/openid2/",
       "/tncms/webservice/",
       "/tncms/search/",
-      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/track/",
-      "/tncms/admin/",
-      "/tncms/auth/"
+      "/tncms/counter/",
+      "/tncms/admin/"
      ]
     },
     "Perplexity-User": {
@@ -98053,14 +98254,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/counter/",
+      "/tncms/dmp/",
+      "/tncms/block/",
+      "/tncms/openid2/",
       "/tncms/webservice/",
       "/tncms/search/",
-      "/tncms/messaging/",
       "/tncms/tax/",
-      "/tncms/track/",
-      "/tncms/admin/",
-      "/tncms/auth/"
+      "/tncms/counter/",
+      "/tncms/admin/"
      ]
     }
    },
@@ -98824,10 +99025,10 @@
       "/subscribe/kiosk/",
       "/subscribe/return/",
       "/test/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/openid2/",
-      "/tncms/webservice/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/",
+      "/tncms/counter/",
+      "/tncms/media/"
      ]
     },
     "PerplexityBot": {
@@ -98851,10 +99052,10 @@
       "/subscribe/kiosk/",
       "/subscribe/return/",
       "/test/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/openid2/",
-      "/tncms/webservice/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/",
+      "/tncms/counter/",
+      "/tncms/media/"
      ]
     },
     "Perplexity-User": {
@@ -98868,10 +99069,10 @@
       "/subscribe/kiosk/",
       "/subscribe/return/",
       "/test/",
-      "/tncms/dmp/",
-      "/tncms/block/",
-      "/tncms/openid2/",
-      "/tncms/webservice/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/",
+      "/tncms/counter/",
+      "/tncms/media/"
      ]
     }
    },
@@ -99769,13 +99970,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/tncms/counter/",
-      "/tncms/block/",
-      "/tncms/messaging/",
-      "/tncms/admin/",
-      "/tncms/openweb/*",
-      "/tncms/track/",
       "/tncms/webservice/",
-      "/tncms/dmp/"
+      "/tncms/search/",
+      "/tncms/messaging/",
+      "/tncms/tax/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -99796,13 +99997,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/tncms/counter/",
-      "/tncms/block/",
-      "/tncms/messaging/",
-      "/tncms/admin/",
-      "/tncms/openweb/*",
-      "/tncms/track/",
       "/tncms/webservice/",
-      "/tncms/dmp/"
+      "/tncms/search/",
+      "/tncms/messaging/",
+      "/tncms/tax/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -99813,13 +100014,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/tncms/counter/",
-      "/tncms/block/",
-      "/tncms/messaging/",
-      "/tncms/admin/",
-      "/tncms/openweb/*",
-      "/tncms/track/",
       "/tncms/webservice/",
-      "/tncms/dmp/"
+      "/tncms/search/",
+      "/tncms/messaging/",
+      "/tncms/tax/",
+      "/tncms/track/",
+      "/tncms/admin/",
+      "/tncms/auth/"
      ]
     }
    },
@@ -99930,7 +100131,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "CCBot": {
@@ -99947,7 +100148,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "ClaudeBot": {
@@ -99964,7 +100165,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "anthropic-ai": {
@@ -99981,7 +100182,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Google-Extended": {
@@ -99998,7 +100199,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Applebot-Extended": {
@@ -100015,7 +100216,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -100032,7 +100233,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Bytespider": {
@@ -100049,7 +100250,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "OAI-SearchBot": {
@@ -100066,7 +100267,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Claude-SearchBot": {
@@ -100083,7 +100284,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "PerplexityBot": {
@@ -100100,7 +100301,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "ChatGPT-User": {
@@ -100117,7 +100318,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Claude-User": {
@@ -100134,7 +100335,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     },
     "Perplexity-User": {
@@ -100151,7 +100352,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/messaging/"
+      "/tncms/block/"
      ]
     }
    },
@@ -100327,9 +100528,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "CCBot": {
@@ -100344,9 +100545,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "ClaudeBot": {
@@ -100361,9 +100562,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "anthropic-ai": {
@@ -100378,9 +100579,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Google-Extended": {
@@ -100395,9 +100596,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Applebot-Extended": {
@@ -100412,9 +100613,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -100429,9 +100630,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Bytespider": {
@@ -100446,9 +100647,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "OAI-SearchBot": {
@@ -100463,9 +100664,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Claude-SearchBot": {
@@ -100480,9 +100681,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "PerplexityBot": {
@@ -100497,9 +100698,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "ChatGPT-User": {
@@ -100514,9 +100715,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Claude-User": {
@@ -100531,9 +100732,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     },
     "Perplexity-User": {
@@ -100548,9 +100749,9 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/messaging/",
-      "/tncms/track/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/"
      ]
     }
    },
@@ -100618,13 +100819,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/2024-favorite-christmas-movies/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/webservice/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/counter/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/",
+      "/tncms/search/",
+      "/tncms/auth/",
+      "/tncms/track/",
+      "/tncms/gtm/"
      ]
     },
     "PerplexityBot": {
@@ -100645,13 +100846,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/2024-favorite-christmas-movies/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/webservice/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/counter/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/",
+      "/tncms/search/",
+      "/tncms/auth/",
+      "/tncms/track/",
+      "/tncms/gtm/"
      ]
     },
     "Perplexity-User": {
@@ -100662,13 +100863,13 @@
       "/tncms/tracking/",
       "/_services/",
       "/2024-favorite-christmas-movies/",
-      "/tncms/media/",
-      "/tncms/messaging/",
-      "/tncms/webservice/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/counter/",
-      "/tncms/tax/"
+      "/tncms/openweb/*",
+      "/tncms/weather/",
+      "/tncms/openid2/",
+      "/tncms/search/",
+      "/tncms/auth/",
+      "/tncms/track/",
+      "/tncms/gtm/"
      ]
     }
    },
@@ -100757,14 +100958,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/openweb/*",
-      "/tncms/weather/",
-      "/tncms/openid2/",
-      "/tncms/search/",
-      "/tncms/auth/",
+      "/tncms/media/",
       "/tncms/track/",
-      "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/dmp/",
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     },
     "PerplexityBot": {
@@ -100784,14 +100985,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/openweb/*",
-      "/tncms/weather/",
-      "/tncms/openid2/",
-      "/tncms/search/",
-      "/tncms/auth/",
+      "/tncms/media/",
       "/tncms/track/",
-      "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/dmp/",
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     },
     "Perplexity-User": {
@@ -100801,14 +101002,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/openweb/*",
-      "/tncms/weather/",
-      "/tncms/openid2/",
-      "/tncms/search/",
-      "/tncms/auth/",
+      "/tncms/media/",
       "/tncms/track/",
-      "/tncms/gtm/",
-      "/tncms/dmp/"
+      "/tncms/dmp/",
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     }
    },
@@ -101129,9 +101330,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     },
     "Google-Extended": {
@@ -101166,9 +101367,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     },
     "Claude-SearchBot": {
@@ -101183,9 +101384,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     },
     "PerplexityBot": {
@@ -101200,9 +101401,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     },
     "ChatGPT-User": {
@@ -101217,9 +101418,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     },
     "Claude-User": {
@@ -101234,9 +101435,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     },
     "Perplexity-User": {
@@ -101251,9 +101452,9 @@
       "/classifieds/community/announcements/legal/",
       "/newsletter/optimize/test/",
       "/test/",
-      "/tncms/csrf/",
-      "/tncms/auth/",
-      "/tncms/openid2/"
+      "/tncms/search/",
+      "/tncms/dmp/",
+      "/tncms/csrf/"
      ]
     }
    },
@@ -101320,14 +101521,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/media/",
-      "/tncms/webservice/",
       "/tncms/auth/",
+      "/tncms/csrf/",
+      "/tncms/dmp/",
+      "/tncms/media/",
       "/tncms/openweb/*",
-      "/tncms/openid2/",
-      "/tncms/gtm/",
-      "/tncms/track/",
-      "/tncms/tax/"
+      "/tncms/weather/",
+      "/tncms/block/",
+      "/tncms/counter/"
      ]
     },
     "PerplexityBot": {
@@ -101347,14 +101548,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/media/",
-      "/tncms/webservice/",
       "/tncms/auth/",
+      "/tncms/csrf/",
+      "/tncms/dmp/",
+      "/tncms/media/",
       "/tncms/openweb/*",
-      "/tncms/openid2/",
-      "/tncms/gtm/",
-      "/tncms/track/",
-      "/tncms/tax/"
+      "/tncms/weather/",
+      "/tncms/block/",
+      "/tncms/counter/"
      ]
     },
     "Perplexity-User": {
@@ -101364,14 +101565,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/media/",
-      "/tncms/webservice/",
       "/tncms/auth/",
+      "/tncms/csrf/",
+      "/tncms/dmp/",
+      "/tncms/media/",
       "/tncms/openweb/*",
-      "/tncms/openid2/",
-      "/tncms/gtm/",
-      "/tncms/track/",
-      "/tncms/tax/"
+      "/tncms/weather/",
+      "/tncms/block/",
+      "/tncms/counter/"
      ]
     }
    },
@@ -102145,14 +102346,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/openweb/*",
-      "/tncms/messaging/",
-      "/tncms/counter/",
       "/tncms/media/",
-      "/tncms/dmp/",
       "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/tax/"
+      "/tncms/dmp/",
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     },
     "PerplexityBot": {
@@ -102172,14 +102373,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/openweb/*",
-      "/tncms/messaging/",
-      "/tncms/counter/",
       "/tncms/media/",
-      "/tncms/dmp/",
       "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/tax/"
+      "/tncms/dmp/",
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     },
     "Perplexity-User": {
@@ -102189,14 +102390,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/openweb/*",
-      "/tncms/messaging/",
-      "/tncms/counter/",
       "/tncms/media/",
-      "/tncms/dmp/",
       "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/tax/"
+      "/tncms/dmp/",
+      "/tncms/openweb/*",
+      "/tncms/admin/",
+      "/tncms/block/",
+      "/tncms/openid2/",
+      "/tncms/webservice/"
      ]
     }
    },
@@ -102224,8 +102425,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "CCBot": {
@@ -102241,8 +102442,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "ClaudeBot": {
@@ -102258,8 +102459,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "anthropic-ai": {
@@ -102275,8 +102476,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Google-Extended": {
@@ -102292,8 +102493,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Applebot-Extended": {
@@ -102309,8 +102510,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -102326,8 +102527,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Bytespider": {
@@ -102343,8 +102544,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "OAI-SearchBot": {
@@ -102360,8 +102561,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Claude-SearchBot": {
@@ -102377,8 +102578,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -102394,8 +102595,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "ChatGPT-User": {
@@ -102411,8 +102612,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Claude-User": {
@@ -102428,8 +102629,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -102445,8 +102646,8 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/gtm/",
-      "/tncms/media/"
+      "/tncms/openweb/*",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -102652,10 +102853,10 @@
       "/extra/",
       "/news/public_safety_report/",
       "/test3/",
-      "/tncms/openid2/",
-      "/tncms/weather/",
-      "/tncms/admin/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/"
      ]
     },
     "PerplexityBot": {
@@ -102679,10 +102880,10 @@
       "/extra/",
       "/news/public_safety_report/",
       "/test3/",
-      "/tncms/openid2/",
-      "/tncms/weather/",
-      "/tncms/admin/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/"
      ]
     },
     "Perplexity-User": {
@@ -102696,10 +102897,10 @@
       "/extra/",
       "/news/public_safety_report/",
       "/test3/",
-      "/tncms/openid2/",
-      "/tncms/weather/",
-      "/tncms/admin/",
-      "/tncms/messaging/"
+      "/tncms/track/",
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/"
      ]
     }
    },
@@ -102726,7 +102927,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "CCBot": {
@@ -102746,7 +102948,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "anthropic-ai": {
@@ -102761,7 +102964,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "Google-Extended": {
@@ -102776,7 +102980,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "Applebot-Extended": {
@@ -102801,7 +103006,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "OAI-SearchBot": {
@@ -102816,7 +103022,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "Claude-SearchBot": {
@@ -102831,7 +103038,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "PerplexityBot": {
@@ -102851,7 +103059,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "Claude-User": {
@@ -102866,7 +103075,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     },
     "Perplexity-User": {
@@ -102881,7 +103091,8 @@
       "/video/sponsored/",
       "/*from_app=1*",
       "/redeem-license/",
-      "/fragments/"
+      "/fragments/",
+      "/footer/"
      ]
     }
    },
@@ -102989,10 +103200,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "CCBot": {
@@ -103006,10 +103217,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "ClaudeBot": {
@@ -103023,10 +103234,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "anthropic-ai": {
@@ -103040,10 +103251,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Google-Extended": {
@@ -103057,10 +103268,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Applebot-Extended": {
@@ -103074,10 +103285,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -103091,10 +103302,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Bytespider": {
@@ -103108,10 +103319,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "OAI-SearchBot": {
@@ -103125,10 +103336,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Claude-SearchBot": {
@@ -103142,10 +103353,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "PerplexityBot": {
@@ -103159,10 +103370,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "ChatGPT-User": {
@@ -103176,10 +103387,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Claude-User": {
@@ -103193,10 +103404,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     },
     "Perplexity-User": {
@@ -103210,10 +103421,10 @@
       "/nowapp/delete_account/",
       "/test/",
       "/wrapper/",
-      "/tncms/block/",
+      "/tncms/gtm/",
+      "/tncms/media/",
       "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/"
      ]
     }
    },
@@ -104128,11 +104339,250 @@
   },
   {
    "domain": "yourvalley.net",
-   "fetched": null,
-   "error": "HTTP 403",
+   "fetched": "https://www.yourvalley.net/robots.txt",
+   "error": null,
    "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/css/",
+      "/css_system/",
+      "/js/",
+      "/js_system/",
+      "/account/",
+      "/calendar/post/",
+      "/forms/",
+      "/login.html",
+      "/poll_process.html",
+      "/post_comments.html"
+     ]
+    }
+   },
    "region": "US",
    "name": "Your Valley",
    "dr": 73.0
@@ -106016,11 +106466,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "CCBot": {
@@ -106033,11 +106483,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "ClaudeBot": {
@@ -106050,11 +106500,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "anthropic-ai": {
@@ -106067,11 +106517,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Google-Extended": {
@@ -106084,11 +106534,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Applebot-Extended": {
@@ -106101,11 +106551,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -106118,11 +106568,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Bytespider": {
@@ -106135,11 +106585,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "OAI-SearchBot": {
@@ -106152,11 +106602,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-SearchBot": {
@@ -106169,11 +106619,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -106186,11 +106636,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "ChatGPT-User": {
@@ -106203,11 +106653,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Claude-User": {
@@ -106220,11 +106670,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -106237,11 +106687,11 @@
       "/exclusive/get-healthy/",
       "/nowapp/delete_account/",
       "/tncms/openweb/*",
-      "/tncms/track/",
-      "/tncms/webservice/",
-      "/tncms/admin/",
       "/tncms/tax/",
-      "/tncms/counter/"
+      "/tncms/csrf/",
+      "/tncms/gtm/",
+      "/tncms/auth/",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -106308,14 +106758,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/block/",
-      "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/",
-      "/tncms/gtm/",
-      "/tncms/search/",
+      "/tncms/media/",
       "/tncms/csrf/",
-      "/tncms/webservice/"
+      "/tncms/webservice/",
+      "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/block/",
+      "/tncms/admin/",
+      "/tncms/auth/"
      ]
     },
     "PerplexityBot": {
@@ -106335,14 +106785,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/block/",
-      "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/",
-      "/tncms/gtm/",
-      "/tncms/search/",
+      "/tncms/media/",
       "/tncms/csrf/",
-      "/tncms/webservice/"
+      "/tncms/webservice/",
+      "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/block/",
+      "/tncms/admin/",
+      "/tncms/auth/"
      ]
     },
     "Perplexity-User": {
@@ -106352,14 +106802,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/block/",
-      "/tncms/messaging/",
-      "/tncms/tax/",
-      "/tncms/counter/",
-      "/tncms/gtm/",
-      "/tncms/search/",
+      "/tncms/media/",
       "/tncms/csrf/",
-      "/tncms/webservice/"
+      "/tncms/webservice/",
+      "/tncms/gtm/",
+      "/tncms/dmp/",
+      "/tncms/block/",
+      "/tncms/admin/",
+      "/tncms/auth/"
      ]
     }
    },
@@ -106508,14 +106958,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/search/",
-      "/tncms/messaging/",
+      "/tncms/webservice/",
       "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
       "/tncms/dmp/",
+      "/tncms/auth/",
+      "/tncms/weather/",
       "/tncms/track/",
-      "/tncms/auth/"
+      "/tncms/admin/",
+      "/tncms/openid2/"
      ]
     },
     "PerplexityBot": {
@@ -106535,14 +106985,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/search/",
-      "/tncms/messaging/",
+      "/tncms/webservice/",
       "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
       "/tncms/dmp/",
+      "/tncms/auth/",
+      "/tncms/weather/",
       "/tncms/track/",
-      "/tncms/auth/"
+      "/tncms/admin/",
+      "/tncms/openid2/"
      ]
     },
     "Perplexity-User": {
@@ -106552,14 +107002,14 @@
      "paths": [
       "/tncms/tracking/",
       "/_services/",
-      "/tncms/search/",
-      "/tncms/messaging/",
+      "/tncms/webservice/",
       "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/",
       "/tncms/dmp/",
+      "/tncms/auth/",
+      "/tncms/weather/",
       "/tncms/track/",
-      "/tncms/auth/"
+      "/tncms/admin/",
+      "/tncms/openid2/"
      ]
     }
    },
@@ -106629,11 +107079,11 @@
       "/news/nationandworld/",
       "/nowapp/delete_account/",
       "/site/forms/private/",
-      "/tncms/media/",
-      "/tncms/webservice/",
+      "/tncms/csrf/",
       "/tncms/auth/",
-      "/tncms/openweb/*",
-      "/tncms/openid2/"
+      "/tncms/openid2/",
+      "/tncms/search/",
+      "/tncms/openweb/*"
      ]
     },
     "PerplexityBot": {
@@ -106656,11 +107106,11 @@
       "/news/nationandworld/",
       "/nowapp/delete_account/",
       "/site/forms/private/",
-      "/tncms/media/",
-      "/tncms/webservice/",
+      "/tncms/csrf/",
       "/tncms/auth/",
-      "/tncms/openweb/*",
-      "/tncms/openid2/"
+      "/tncms/openid2/",
+      "/tncms/search/",
+      "/tncms/openweb/*"
      ]
     },
     "Perplexity-User": {
@@ -106673,11 +107123,11 @@
       "/news/nationandworld/",
       "/nowapp/delete_account/",
       "/site/forms/private/",
-      "/tncms/media/",
-      "/tncms/webservice/",
+      "/tncms/csrf/",
       "/tncms/auth/",
-      "/tncms/openweb/*",
-      "/tncms/openid2/"
+      "/tncms/openid2/",
+      "/tncms/search/",
+      "/tncms/openweb/*"
      ]
     }
    },
@@ -106706,7 +107156,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "CCBot": {
@@ -106723,7 +107173,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "ClaudeBot": {
@@ -106740,7 +107190,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "anthropic-ai": {
@@ -106757,7 +107207,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Google-Extended": {
@@ -106774,7 +107224,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Applebot-Extended": {
@@ -106791,7 +107241,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -106808,7 +107258,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Bytespider": {
@@ -106825,7 +107275,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "OAI-SearchBot": {
@@ -106842,7 +107292,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Claude-SearchBot": {
@@ -106859,7 +107309,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "PerplexityBot": {
@@ -106876,7 +107326,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "ChatGPT-User": {
@@ -106893,7 +107343,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Claude-User": {
@@ -106910,7 +107360,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     },
     "Perplexity-User": {
@@ -106927,7 +107377,7 @@
       "/nowapp/delete_account/",
       "/template/",
       "/test/",
-      "/tncms/csrf/"
+      "/tncms/counter/"
      ]
     }
    },
@@ -107080,10 +107530,10 @@
       "/fix/",
       "/test/nxt/",
       "/test/testform/",
-      "/tncms/openweb/*",
-      "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/"
+      "/tncms/track/",
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/"
      ]
     },
     "PerplexityBot": {
@@ -107107,10 +107557,10 @@
       "/fix/",
       "/test/nxt/",
       "/test/testform/",
-      "/tncms/openweb/*",
-      "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/"
+      "/tncms/track/",
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/"
      ]
     },
     "Perplexity-User": {
@@ -107124,10 +107574,10 @@
       "/fix/",
       "/test/nxt/",
       "/test/testform/",
-      "/tncms/openweb/*",
-      "/tncms/tax/",
-      "/tncms/csrf/",
-      "/tncms/gtm/"
+      "/tncms/track/",
+      "/tncms/block/",
+      "/tncms/search/",
+      "/tncms/media/"
      ]
     }
    },
@@ -107198,10 +107648,10 @@
       "/test/nxt/",
       "/test_ent/",
       "/tntest/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/"
+      "/tncms/openid2/",
+      "/tncms/weather/",
+      "/tncms/admin/",
+      "/tncms/messaging/"
      ]
     },
     "PerplexityBot": {
@@ -107225,10 +107675,10 @@
       "/test/nxt/",
       "/test_ent/",
       "/tntest/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/"
+      "/tncms/openid2/",
+      "/tncms/weather/",
+      "/tncms/admin/",
+      "/tncms/messaging/"
      ]
     },
     "Perplexity-User": {
@@ -107242,10 +107692,10 @@
       "/test/nxt/",
       "/test_ent/",
       "/tntest/",
-      "/tncms/auth/",
-      "/tncms/csrf/",
-      "/tncms/dmp/",
-      "/tncms/media/"
+      "/tncms/openid2/",
+      "/tncms/weather/",
+      "/tncms/admin/",
+      "/tncms/messaging/"
      ]
     }
    },
@@ -107546,11 +107996,11 @@
       "/native/sports/",
       "/nowapp/delete_account/",
       "/tncms/admin/",
-      "/tncms/dmp/",
-      "/tncms/openid2/",
       "/tncms/counter/",
+      "/tncms/weather/",
+      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/openweb/*"
+      "/tncms/dmp/"
      ]
     },
     "PerplexityBot": {
@@ -107573,11 +108023,11 @@
       "/native/sports/",
       "/nowapp/delete_account/",
       "/tncms/admin/",
-      "/tncms/dmp/",
-      "/tncms/openid2/",
       "/tncms/counter/",
+      "/tncms/weather/",
+      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/openweb/*"
+      "/tncms/dmp/"
      ]
     },
     "Perplexity-User": {
@@ -107590,11 +108040,11 @@
       "/native/sports/",
       "/nowapp/delete_account/",
       "/tncms/admin/",
-      "/tncms/dmp/",
-      "/tncms/openid2/",
       "/tncms/counter/",
+      "/tncms/weather/",
+      "/tncms/openid2/",
       "/tncms/gtm/",
-      "/tncms/openweb/*"
+      "/tncms/dmp/"
      ]
     }
    },
@@ -109363,12 +109813,12 @@
       "/_services/",
       "/newsletters/scene/scene_test/",
       "/nowapp/delete_account/",
+      "/tncms/csrf/",
+      "/tncms/auth/",
       "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*",
       "/tncms/search/",
-      "/tncms/gtm/",
-      "/tncms/block/"
+      "/tncms/openweb/*",
+      "/tncms/gtm/"
      ]
     },
     "PerplexityBot": {
@@ -109390,12 +109840,12 @@
       "/_services/",
       "/newsletters/scene/scene_test/",
       "/nowapp/delete_account/",
+      "/tncms/csrf/",
+      "/tncms/auth/",
       "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*",
       "/tncms/search/",
-      "/tncms/gtm/",
-      "/tncms/block/"
+      "/tncms/openweb/*",
+      "/tncms/gtm/"
      ]
     },
     "Perplexity-User": {
@@ -109407,12 +109857,12 @@
       "/_services/",
       "/newsletters/scene/scene_test/",
       "/nowapp/delete_account/",
+      "/tncms/csrf/",
+      "/tncms/auth/",
       "/tncms/openid2/",
-      "/tncms/dmp/",
-      "/tncms/openweb/*",
       "/tncms/search/",
-      "/tncms/gtm/",
-      "/tncms/block/"
+      "/tncms/openweb/*",
+      "/tncms/gtm/"
      ]
     }
    },
