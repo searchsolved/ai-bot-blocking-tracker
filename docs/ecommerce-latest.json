@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-13T14:11:12.336427+00:00",
+ "run_at": "2026-10-14T11:51:29.891118+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -1077,7 +1077,7 @@
    "domain": "vinted.co.uk",
    "fetched": "https://www.vinted.co.uk/robots.txt",
    "error": null,
-   "edge": "cloudflare",
+   "edge": "fastly",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -16677,182 +16677,78 @@
    "domain": "office.co.uk",
    "fetched": "https://www.office.co.uk/robots.txt",
    "error": null,
-   "edge": "*",
+   "edge": "akamai",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "ClaudeBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Applebot-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Meta-ExternalAgent": {
-     "verdict": "blocked",
-     "via": "meta-externalagent",
-     "explicit": true
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Bytespider": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Claude-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "PerplexityBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     },
     "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/view/secured/content/login",
-      "/view/resources/getUserInfo",
-      "/view/search*",
-      "/view/getDeliveryDayMessage",
-      "*|*",
-      "/*&*&*&*"
-     ]
+     "verdict": "no-rule",
+     "via": "none",
+     "explicit": false
     }
    },
    "region": "UK",
@@ -22444,11 +22340,250 @@
   },
   {
    "domain": "blackcircles.com",
-   "fetched": null,
-   "error": "HTTP 406",
-   "edge": "unknown",
+   "fetched": "https://www.blackcircles.com/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*tyre-reviews?bcid=*",
+      "/*tyre-reviews?id=*",
+      "/*tyre-reviews-adv?ean=*",
+      "/*garage-reviews?id=*",
+      "/*reglookup",
+      "/offers/loyalty",
+      "/offers/loyalty/",
+      "/fitfast",
+      "/collections/portal",
+      "/fleet"
+     ]
+    }
+   },
    "region": "UK",
    "name": "Black Circles",
    "dr": 65.0
@@ -53045,7 +53180,7 @@
    "domain": "bedbathandbeyond.com",
    "fetched": "https://www.bedbathandbeyond.com/robots.txt",
    "error": null,
-   "edge": "ats/9.2.11",
+   "edge": "ats/9.2.12",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
