@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-15T11:28:11.477319+00:00",
+ "run_at": "2026-10-16T11:23:30.007662+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -19948,50 +19948,50 @@
   },
   {
    "domain": "roughtrade.com",
-   "fetched": "https://www.roughtrade.com/robots.txt",
+   "fetched": "https://roughtrade.com/robots.txt",
    "error": null,
    "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "gptbot",
+     "explicit": true
     },
     "CCBot": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "ccbot",
+     "explicit": true
     },
     "ClaudeBot": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
     },
     "anthropic-ai": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "anthropic-ai",
+     "explicit": true
     },
     "Google-Extended": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "google-extended",
+     "explicit": true
     },
     "Applebot-Extended": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "applebot-extended",
+     "explicit": true
     },
     "Meta-ExternalAgent": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
     },
     "Bytespider": {
-     "verdict": "allowed",
-     "via": "*",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
     },
     "OAI-SearchBot": {
      "verdict": "allowed",
@@ -38165,7 +38165,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "server",
+   "edge": "cloudfront",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -42100,11 +42100,238 @@
   },
   {
    "domain": "discogs.com",
-   "fetched": null,
-   "error": "HTTP 403",
-   "edge": "unknown",
+   "fetched": "https://www.discogs.com:443/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "applebot",
+     "explicit": true,
+     "paths": [
+      "*/sell/list",
+      "*/mplistrss",
+      "*/marketplace",
+      "*/seller/*",
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    }
+   },
    "region": "US",
    "name": "Discogs",
    "dr": 90.0
@@ -50894,6 +51121,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -50901,8 +51129,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "CCBot": {
@@ -50911,6 +51138,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -50918,8 +51146,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "ClaudeBot": {
@@ -50928,6 +51155,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -50935,8 +51163,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "anthropic-ai": {
@@ -50945,6 +51172,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -50952,8 +51180,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Google-Extended": {
@@ -50962,6 +51189,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -50969,8 +51197,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Applebot-Extended": {
@@ -50979,6 +51206,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -50986,8 +51214,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Meta-ExternalAgent": {
@@ -50996,6 +51223,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51003,8 +51231,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Bytespider": {
@@ -51013,6 +51240,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51020,8 +51248,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "OAI-SearchBot": {
@@ -51030,6 +51257,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51037,8 +51265,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Claude-SearchBot": {
@@ -51047,6 +51274,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51054,8 +51282,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "PerplexityBot": {
@@ -51064,6 +51291,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51071,8 +51299,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "ChatGPT-User": {
@@ -51081,6 +51308,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51088,8 +51316,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Claude-User": {
@@ -51098,6 +51325,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51105,8 +51333,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     },
     "Perplexity-User": {
@@ -51115,6 +51342,7 @@
      "explicit": false,
      "paths": [
       "/bin/",
+      "/product/review/add/",
       "/logout",
       "/register",
       "/account",
@@ -51122,8 +51350,7 @@
       "/marty/account",
       "/multiview/",
       "/productNotifyMe.do*",
-      "/tellAFriend.do*",
-      "/prd/popups/brandNotifyMe.zml"
+      "/tellAFriend.do*"
      ]
     }
    },
@@ -64594,130 +64821,11 @@
   },
   {
    "domain": "rockauto.com",
-   "fetched": "https://www.rockauto.com/robots.txt",
-   "error": null,
-   "edge": "nginx",
+   "fetched": null,
+   "error": "<urlopen error timed out>",
+   "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {
-    "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "ClaudeBot": {
-     "verdict": "blocked",
-     "via": "claudebot",
-     "explicit": true
-    },
-    "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Applebot-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Meta-ExternalAgent": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Bytespider": {
-     "verdict": "blocked",
-     "via": "bytespider",
-     "explicit": true
-    },
-    "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Claude-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "PerplexityBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    },
-    "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/info/",
-      "/cgi-bin/"
-     ]
-    }
-   },
+   "bots": {},
    "region": "US",
    "name": "RockAuto",
    "dr": 72.0
@@ -66507,7 +66615,7 @@
   },
   {
    "domain": "hoka.com",
-   "fetched": "https://hoka.com/robots.txt",
+   "fetched": "https://www.hoka.com/robots.txt",
    "error": null,
    "edge": "cloudflare",
    "cloudflare_managed": false,
@@ -77913,250 +78021,11 @@
   },
   {
    "domain": "crutchfield.com",
-   "fetched": "https://www.crutchfield.com/robots.txt",
-   "error": null,
-   "edge": "cloudflare",
+   "fetched": null,
+   "error": "HTTP 403",
+   "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {
-    "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "ClaudeBot": {
-     "verdict": "partial",
-     "via": "claudebot",
-     "explicit": true,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Applebot-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Meta-ExternalAgent": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Bytespider": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Claude-SearchBot": {
-     "verdict": "partial",
-     "via": "claude-searchbot",
-     "explicit": true,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "PerplexityBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    },
-    "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/Popups/",
-      "/*/Popups/",
-      "/popups/",
-      "/*/popups/",
-      "/secure/account/",
-      "/*/secure/account/",
-      "/*/Secure/Account/",
-      "/Secure/Account/",
-      "/product/glossary.aspx",
-      "/*/product/glossary.aspx"
-     ]
-    }
-   },
+   "bots": {},
    "region": "US",
    "name": "Crutchfield",
    "dr": 76.0
