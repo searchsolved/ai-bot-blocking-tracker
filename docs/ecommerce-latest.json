@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-18T11:03:37.178596+00:00",
+ "run_at": "2026-10-19T13:12:29.793298+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -1077,7 +1077,7 @@
    "domain": "vinted.co.uk",
    "fetched": "https://www.vinted.co.uk/robots.txt",
    "error": null,
-   "edge": "fastly",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -2616,11 +2616,82 @@
   },
   {
    "domain": "asda.com",
-   "fetched": null,
-   "error": "HTTP 403",
-   "edge": "unknown",
+   "fetched": "https://asda.com/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "blocked",
+     "via": "gptbot",
+     "explicit": true
+    },
+    "CCBot": {
+     "verdict": "blocked",
+     "via": "ccbot",
+     "explicit": true
+    },
+    "ClaudeBot": {
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
+    },
+    "anthropic-ai": {
+     "verdict": "blocked",
+     "via": "anthropic-ai",
+     "explicit": true
+    },
+    "Google-Extended": {
+     "verdict": "blocked",
+     "via": "google-extended",
+     "explicit": true
+    },
+    "Applebot-Extended": {
+     "verdict": "blocked",
+     "via": "applebot-extended",
+     "explicit": true
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
+    },
+    "Bytespider": {
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
+    },
+    "OAI-SearchBot": {
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
+    },
+    "Claude-SearchBot": {
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
+    },
+    "PerplexityBot": {
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
+    },
+    "ChatGPT-User": {
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
+    },
+    "Claude-User": {
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
+    },
+    "Perplexity-User": {
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
+    }
+   },
    "region": "UK",
    "name": "Asda",
    "dr": 81.0
@@ -13569,7 +13640,7 @@
    "domain": "moonpig.com",
    "fetched": "https://www.moonpig.com/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -16551,78 +16622,182 @@
    "domain": "office.co.uk",
    "fetched": "https://www.office.co.uk/robots.txt",
    "error": null,
-   "edge": "akamai",
+   "edge": "*",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "CCBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "ClaudeBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "anthropic-ai": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "Google-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "Applebot-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "Meta-ExternalAgent": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
     },
     "Bytespider": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "OAI-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "Claude-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "PerplexityBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "ChatGPT-User": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "Claude-User": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     },
     "Perplexity-User": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/view/secured/content/login",
+      "/view/resources/getUserInfo",
+      "/view/search*",
+      "/view/getDeliveryDayMessage",
+      "*|*",
+      "/*&*&*&*"
+     ]
     }
    },
    "region": "UK",
@@ -29908,215 +30083,80 @@
   },
   {
    "domain": "menkind.co.uk",
-   "fetched": "https://www.menkind.co.uk/robots.txt",
+   "fetched": "https://menkind.co.uk/robots.txt",
    "error": null,
    "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "gptbot",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "CCBot": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "ccbot",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "ClaudeBot": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "claudebot",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "anthropic-ai": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "anthropic-ai",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "Google-Extended": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "google-extended",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "Applebot-Extended": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "applebot-extended",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "Meta-ExternalAgent": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "meta-externalagent",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "Bytespider": {
-     "verdict": "partial",
+     "verdict": "blocked",
      "via": "bytespider",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "explicit": true
     },
     "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "oai-searchbot",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
     },
     "Claude-SearchBot": {
-     "verdict": "partial",
+     "verdict": "allowed",
      "via": "*",
-     "explicit": false,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/finishorder.php",
-      "/login.php",
-      "/orderstatus.php",
-      "/postreview.php",
-      "/productimage.php",
-      "/productupdates.php"
-     ]
+     "explicit": false
     },
     "PerplexityBot": {
-     "verdict": "partial",
-     "via": "perplexitybot",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
     },
     "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "chatgpt-user",
-     "explicit": true,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/admin/",
-      "/*?_bc_fsnf=1*",
-      "/*&_bc_fsnf=1*"
-     ]
+     "verdict": "allowed",
+     "via": "*",
+     "explicit": false
     },
     "Claude-User": {
-     "verdict": "partial",
+     "verdict": "allowed",
      "via": "*",
-     "explicit": false,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/finishorder.php",
-      "/login.php",
-      "/orderstatus.php",
-      "/postreview.php",
-      "/productimage.php",
-      "/productupdates.php"
-     ]
+     "explicit": false
     },
     "Perplexity-User": {
-     "verdict": "partial",
+     "verdict": "allowed",
      "via": "*",
-     "explicit": false,
-     "paths": [
-      "/account.php",
-      "/cart.php",
-      "/checkout.php",
-      "/checkout",
-      "/finishorder.php",
-      "/login.php",
-      "/orderstatus.php",
-      "/postreview.php",
-      "/productimage.php",
-      "/productupdates.php"
-     ]
+     "explicit": false
     }
    },
    "region": "UK",
@@ -37991,7 +38031,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "server",
+   "edge": "cloudfront",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -41926,11 +41966,238 @@
   },
   {
    "domain": "discogs.com",
-   "fetched": null,
-   "error": "HTTP 403",
-   "edge": "unknown",
+   "fetched": "https://www.discogs.com:443/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "applebot",
+     "explicit": true,
+     "paths": [
+      "*/sell/list",
+      "*/mplistrss",
+      "*/marketplace",
+      "*/seller/*",
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    }
+   },
    "region": "US",
    "name": "Discogs",
    "dr": 90.0
@@ -43819,7 +44086,7 @@
   {
    "domain": "adidas.com",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -52984,7 +53251,7 @@
    "domain": "bedbathandbeyond.com",
    "fetched": "https://www.bedbathandbeyond.com/robots.txt",
    "error": null,
-   "edge": "ats/9.2.3",
+   "edge": "ats/9.2.12",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
