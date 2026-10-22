@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-21T11:49:08.753121+00:00",
+ "run_at": "2026-10-22T11:51:49.054918+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -1077,7 +1077,7 @@
    "domain": "vinted.co.uk",
    "fetched": "https://www.vinted.co.uk/robots.txt",
    "error": null,
-   "edge": "fastly",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -1584,7 +1584,7 @@
    "domain": "smythstoys.com",
    "fetched": "https://www.smythstoys.com/robots.txt",
    "error": null,
-   "edge": "uploadserver",
+   "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -9285,80 +9285,248 @@
   },
   {
    "domain": "endclothing.com",
-   "fetched": "https://www.endclothing.com/maintenance.html",
+   "fetched": "https://www.endclothing.com/robots.txt",
    "error": null,
-   "edge": "amazons3",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "CCBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "ClaudeBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "anthropic-ai": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Google-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Applebot-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Meta-ExternalAgent": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Bytespider": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "OAI-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Claude-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "PerplexityBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "ChatGPT-User": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Claude-User": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     },
     "Perplexity-User": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/admin",
+      "/cart/",
+      "/*/cart/",
+      "/checkout",
+      "/*/checkout",
+      "/checkouts/",
+      "/*/checkouts/",
+      "/orders",
+      "/*/orders",
+      "/account"
+     ]
     }
    },
    "region": "UK",
@@ -20495,7 +20663,7 @@
    "domain": "footasylum.com",
    "fetched": "https://www.footasylum.com:443/",
    "error": null,
-   "edge": "akamai",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -21011,11 +21179,250 @@
   },
   {
    "domain": "fredperry.com",
-   "fetched": null,
-   "error": "HTTP 503",
-   "edge": "unknown",
+   "fetched": "https://www.fredperry.com/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/*?SID=",
+      "/*?PHPSESSID=",
+      "/*?facebook=",
+      "/*?dir=",
+      "/*?di=",
+      "/*?amp",
+      "/*?limit=",
+      "/*?order=",
+      "/*?options=",
+      "/*?cat="
+     ]
+    }
+   },
    "region": "UK",
    "name": "Fred Perry",
    "dr": 71.0
@@ -58368,6 +58775,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58376,8 +58784,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "CCBot": {
@@ -58385,6 +58792,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58393,8 +58801,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "ClaudeBot": {
@@ -58402,6 +58809,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58410,8 +58818,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "anthropic-ai": {
@@ -58419,6 +58826,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58427,8 +58835,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Google-Extended": {
@@ -58436,6 +58843,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58444,8 +58852,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Applebot-Extended": {
@@ -58453,6 +58860,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58461,8 +58869,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Meta-ExternalAgent": {
@@ -58470,6 +58877,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58478,8 +58886,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Bytespider": {
@@ -58487,6 +58894,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58495,8 +58903,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "OAI-SearchBot": {
@@ -58504,6 +58911,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58512,8 +58920,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Claude-SearchBot": {
@@ -58521,6 +58928,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58529,8 +58937,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "PerplexityBot": {
@@ -58538,6 +58945,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58546,8 +58954,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "ChatGPT-User": {
@@ -58555,6 +58962,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58563,8 +58971,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Claude-User": {
@@ -58572,6 +58979,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58580,8 +58988,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     },
     "Perplexity-User": {
@@ -58589,6 +58996,7 @@
      "via": "*",
      "explicit": false,
      "paths": [
+      "/store/search?s=wall",
       "/store/best/computer_interfaces?params=",
       "/store/best/footpedals?params=",
       "/store/best/guitar_amp_stacks?params=",
@@ -58597,8 +59005,7 @@
       "/store/cart.php",
       "/store/checkout",
       "/affirmthanks",
-      "/myaccount",
-      "/store/addreview"
+      "/myaccount"
      ]
     }
    },
