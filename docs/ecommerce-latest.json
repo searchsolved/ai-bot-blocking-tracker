@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-25T11:26:48.141827+00:00",
+ "run_at": "2026-10-26T13:01:13.265935+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -23,7 +23,7 @@
    "domain": "amazon.co.uk",
    "fetched": "https://www.amazon.co.uk/robots.txt",
    "error": null,
-   "edge": "server",
+   "edge": "cloudfront",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -20663,7 +20663,7 @@
    "domain": "footasylum.com",
    "fetched": "https://www.footasylum.com:443/",
    "error": null,
-   "edge": "akamai",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -42265,11 +42265,238 @@
   },
   {
    "domain": "discogs.com",
-   "fetched": null,
-   "error": "HTTP 403",
-   "edge": "unknown",
+   "fetched": "https://www.discogs.com:443/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "applebot",
+     "explicit": true,
+     "paths": [
+      "*/sell/list",
+      "*/mplistrss",
+      "*/marketplace",
+      "*/seller/*",
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "*/sell/cart",
+      "*/sell/post",
+      "*/sell/order/",
+      "*/sell/orders",
+      "*/sell/mplistrss",
+      "/submissions",
+      "/*/submissions",
+      "/submission",
+      "*/contributions",
+      "/my$"
+     ]
+    }
+   },
    "region": "US",
    "name": "Discogs",
    "dr": 90.0
@@ -44397,7 +44624,7 @@
   {
    "domain": "adidas.com",
    "fetched": null,
-   "error": "HTTP 403",
+   "error": "The read operation timed out",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -53337,7 +53564,7 @@
    "domain": "bedbathandbeyond.com",
    "fetched": "https://www.bedbathandbeyond.com/robots.txt",
    "error": null,
-   "edge": "ats/9.2.3",
+   "edge": "ats/9.2.12",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
