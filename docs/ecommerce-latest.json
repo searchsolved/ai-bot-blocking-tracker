@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-01T13:21:51.027264+00:00",
+ "run_at": "2026-11-02T15:48:23.659682+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -8193,7 +8193,7 @@
   {
    "domain": "adidas.co.uk",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -21738,19 +21738,11 @@
    "bots": {
     "GPTBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "gptbot",
+     "explicit": true,
      "paths": [
-      "/basket/",
-      "/checkout/",
-      "/motorcycle_parts/search/",
-      "/motorcycle_parts/content_search",
-      "/motorcycle_parts/content_cart/",
-      "/my-lists/",
-      "/motorcycle_parts/print/",
-      "/motorcycle_parts/tellafriend/",
-      "/motorcycle_parts/bike_specific/",
-      "/modal_finance.php?"
+      "/motorcycle_parts/content_group/",
+      "/motorcycle_parts/content_style/"
      ]
     },
     "CCBot": {
@@ -21826,7 +21818,8 @@
      "via": "applebot",
      "explicit": true,
      "paths": [
-      "/motorcycle_parts/content_group/"
+      "/motorcycle_parts/content_group/",
+      "/motorcycle_parts/content_style/"
      ]
     },
     "Meta-ExternalAgent": {
@@ -44002,7 +43995,7 @@
   {
    "domain": "adidas.com",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -52942,7 +52935,7 @@
    "domain": "bedbathandbeyond.com",
    "fetched": "https://www.bedbathandbeyond.com/robots.txt",
    "error": null,
-   "edge": "ats/9.2.12",
+   "edge": "ats/9.2.3",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -64378,11 +64371,130 @@
   },
   {
    "domain": "rockauto.com",
-   "fetched": null,
-   "error": "<urlopen error timed out>",
-   "edge": "unknown",
+   "fetched": "https://www.rockauto.com/robots.txt",
+   "error": null,
+   "edge": "nginx",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    }
+   },
    "region": "US",
    "name": "RockAuto",
    "dr": 72.0
@@ -72299,77 +72411,77 @@
    "domain": "stitchfix.com",
    "fetched": "https://www.stitchfix.com/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "gptbot",
+     "explicit": true
     },
     "CCBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "ccbot",
+     "explicit": true
     },
     "ClaudeBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
     },
     "anthropic-ai": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "anthropic-ai",
+     "explicit": true
     },
     "Google-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "google-extended",
+     "explicit": true
     },
     "Applebot-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "applebot-extended",
+     "explicit": true
     },
     "Meta-ExternalAgent": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
     },
     "Bytespider": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
     },
     "OAI-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "Claude-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "PerplexityBot": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "ChatGPT-User": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "Claude-User": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "Perplexity-User": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     }
    },
