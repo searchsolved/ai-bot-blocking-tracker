@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-07T13:00:40.087872+00:00",
+ "run_at": "2026-11-08T13:22:58.561691+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -1077,7 +1077,7 @@
    "domain": "vinted.co.uk",
    "fetched": "https://www.vinted.co.uk/robots.txt",
    "error": null,
-   "edge": "cloudflare",
+   "edge": "fastly",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -8432,7 +8432,7 @@
   {
    "domain": "adidas.co.uk",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -38394,7 +38394,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "server",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -64612,11 +64612,250 @@
   },
   {
    "domain": "reverb.com",
-   "fetched": null,
-   "error": "HTTP 403",
-   "edge": "unknown",
+   "fetched": "https://reverb.com/robots.txt",
+   "error": null,
+   "edge": "cloudflare",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/api/my/",
+      "/api/listings/*/upsell",
+      "/api/listings/*/retargeting_history",
+      "/api/listings/*/related_articles",
+      "/auth/",
+      "/bump/",
+      "/affiliates/comparison_shopping_embeds/",
+      "/page/favorite-fans",
+      "/web_api/cart",
+      "/cdn-cgi/"
+     ]
+    }
+   },
    "region": "US",
    "name": "Reverb",
    "dr": 84.0
@@ -64815,11 +65054,130 @@
   },
   {
    "domain": "rockauto.com",
-   "fetched": null,
-   "error": "<urlopen error timed out>",
-   "edge": "unknown",
+   "fetched": "https://www.rockauto.com/robots.txt",
+   "error": null,
+   "edge": "nginx",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    }
+   },
    "region": "US",
    "name": "RockAuto",
    "dr": 73.0
@@ -70258,7 +70616,7 @@
    "domain": "uline.com",
    "fetched": "https://www.uline.com/robots.txt",
    "error": null,
-   "edge": "microsoft-iis/10.0",
+   "edge": "nginx/1.26.3",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
