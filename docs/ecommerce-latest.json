@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-19T15:44:42.234772+00:00",
+ "run_at": "2026-11-20T15:27:04.493540+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -23,7 +23,7 @@
    "domain": "amazon.co.uk",
    "fetched": "https://www.amazon.co.uk/robots.txt",
    "error": null,
-   "edge": "server",
+   "edge": "cloudfront",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -8432,7 +8432,7 @@
   {
    "domain": "adidas.co.uk",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -38175,15 +38175,9 @@
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/*shop/browse/overlay/*",
-      "/*shop/iphone/payments/overlay/*",
-      "/cn/*/aow/*",
-      "/tmall*"
-     ]
+     "verdict": "allowed",
+     "via": "gptbot",
+     "explicit": true
     },
     "CCBot": {
      "verdict": "partial",
@@ -38263,15 +38257,9 @@
      ]
     },
     "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/*shop/browse/overlay/*",
-      "/*shop/iphone/payments/overlay/*",
-      "/cn/*/aow/*",
-      "/tmall*"
-     ]
+     "verdict": "allowed",
+     "via": "oai-searchbot",
+     "explicit": true
     },
     "Claude-SearchBot": {
      "verdict": "partial",
@@ -38296,15 +38284,9 @@
      ]
     },
     "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/*shop/browse/overlay/*",
-      "/*shop/iphone/payments/overlay/*",
-      "/cn/*/aow/*",
-      "/tmall*"
-     ]
+     "verdict": "allowed",
+     "via": "chatgpt-user",
+     "explicit": true
     },
     "Claude-User": {
      "verdict": "partial",
@@ -38337,7 +38319,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "server",
+   "edge": "cloudfront",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -44431,7 +44413,7 @@
   {
    "domain": "adidas.com",
    "fetched": null,
-   "error": "HTTP 403",
+   "error": "The read operation timed out",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -53798,7 +53780,7 @@
    "domain": "bedbathandbeyond.com",
    "fetched": "https://www.bedbathandbeyond.com/robots.txt",
    "error": null,
-   "edge": "ats/9.2.11",
+   "edge": "ats/9.2.12",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -56189,6 +56171,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56196,8 +56179,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "CCBot": {
@@ -56206,6 +56188,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56213,8 +56196,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "ClaudeBot": {
@@ -56223,6 +56205,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56230,8 +56213,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "anthropic-ai": {
@@ -56240,6 +56222,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56247,8 +56230,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Google-Extended": {
@@ -56257,6 +56239,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56264,8 +56247,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Applebot-Extended": {
@@ -56274,6 +56256,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56281,8 +56264,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Meta-ExternalAgent": {
@@ -56291,6 +56273,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56298,8 +56281,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Bytespider": {
@@ -56308,6 +56290,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56315,8 +56298,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "OAI-SearchBot": {
@@ -56325,6 +56307,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56332,8 +56315,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Claude-SearchBot": {
@@ -56342,6 +56324,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56349,8 +56332,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "PerplexityBot": {
@@ -56359,6 +56341,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56366,8 +56349,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "ChatGPT-User": {
@@ -56376,6 +56358,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56383,8 +56366,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Claude-User": {
@@ -56393,6 +56375,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56400,8 +56383,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     },
     "Perplexity-User": {
@@ -56410,6 +56392,7 @@
      "explicit": false,
      "paths": [
       "*/about",
+      "*/cart",
       "*/checkout",
       "*/confirmation",
       "*/dashboard/",
@@ -56417,8 +56400,7 @@
       "*/regions",
       "/admin/",
       "/gg/3daimtrainer/download",
-      "/gg/download",
-      "/gg/engine/download"
+      "/gg/download"
      ]
     }
    },
