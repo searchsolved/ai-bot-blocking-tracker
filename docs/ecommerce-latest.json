@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-20T15:27:04.493540+00:00",
+ "run_at": "2026-11-21T14:39:23.036747+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -38319,7 +38319,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "server",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -44413,7 +44413,7 @@
   {
    "domain": "adidas.com",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -64522,8 +64522,8 @@
    "bots": {
     "GPTBot": {
      "verdict": "partial",
-     "via": "gptbot",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64539,8 +64539,8 @@
     },
     "CCBot": {
      "verdict": "partial",
-     "via": "ccbot",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64556,8 +64556,8 @@
     },
     "ClaudeBot": {
      "verdict": "partial",
-     "via": "claudebot",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64590,8 +64590,8 @@
     },
     "Google-Extended": {
      "verdict": "partial",
-     "via": "google-extended",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64607,8 +64607,8 @@
     },
     "Applebot-Extended": {
      "verdict": "partial",
-     "via": "applebot-extended",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64624,8 +64624,8 @@
     },
     "Meta-ExternalAgent": {
      "verdict": "partial",
-     "via": "meta-externalagent",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64658,8 +64658,8 @@
     },
     "OAI-SearchBot": {
      "verdict": "partial",
-     "via": "oai-searchbot",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64675,8 +64675,8 @@
     },
     "Claude-SearchBot": {
      "verdict": "partial",
-     "via": "claude-searchbot",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64692,8 +64692,8 @@
     },
     "PerplexityBot": {
      "verdict": "partial",
-     "via": "perplexitybot",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64709,8 +64709,8 @@
     },
     "ChatGPT-User": {
      "verdict": "partial",
-     "via": "chatgpt-user",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64726,8 +64726,8 @@
     },
     "Claude-User": {
      "verdict": "partial",
-     "via": "claude-user",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64743,8 +64743,8 @@
     },
     "Perplexity-User": {
      "verdict": "partial",
-     "via": "perplexity-user",
-     "explicit": true,
+     "via": "*",
+     "explicit": false,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -70530,7 +70530,7 @@
    "domain": "uline.com",
    "fetched": "https://www.uline.com/robots.txt",
    "error": null,
-   "edge": "nginx/1.26.3",
+   "edge": "microsoft-iis/10.0",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -73008,77 +73008,77 @@
    "domain": "stitchfix.com",
    "fetched": "https://www.stitchfix.com/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "gptbot",
+     "explicit": true
     },
     "CCBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "ccbot",
+     "explicit": true
     },
     "ClaudeBot": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
     },
     "anthropic-ai": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "anthropic-ai",
+     "explicit": true
     },
     "Google-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "google-extended",
+     "explicit": true
     },
     "Applebot-Extended": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "applebot-extended",
+     "explicit": true
     },
     "Meta-ExternalAgent": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "meta-externalagent",
+     "explicit": true
     },
     "Bytespider": {
-     "verdict": "no-rule",
-     "via": "none",
-     "explicit": false
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
     },
     "OAI-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "Claude-SearchBot": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "PerplexityBot": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "ChatGPT-User": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "Claude-User": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     },
     "Perplexity-User": {
-     "verdict": "no-rule",
-     "via": "none",
+     "verdict": "allowed",
+     "via": "*",
      "explicit": false
     }
    },
