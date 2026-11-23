@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-22T14:34:27.613240+00:00",
+ "run_at": "2026-11-23T18:04:46.909768+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -1077,7 +1077,7 @@
    "domain": "vinted.co.uk",
    "fetched": "https://www.vinted.co.uk/robots.txt",
    "error": null,
-   "edge": "fastly",
+   "edge": "cloudflare",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -18256,238 +18256,11 @@
   },
   {
    "domain": "theworks.co.uk",
-   "fetched": "https://www.theworks.co.uk/robots.txt",
-   "error": null,
-   "edge": "cloudflare",
+   "fetched": null,
+   "error": "HTTP 403",
+   "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {
-    "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "ClaudeBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "Applebot-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "Meta-ExternalAgent": {
-     "verdict": "blocked",
-     "via": "meta-externalagent",
-     "explicit": true
-    },
-    "Bytespider": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "Claude-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "PerplexityBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    },
-    "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*/search?q",
-      "*prefn1",
-      "*prefv1",
-      "*crefn",
-      "*crefv",
-      "*pmin=",
-      "*pmax=",
-      "*srule",
-      "*/webapp/wcs/stores/servlet/",
-      "*Account-EditProfile"
-     ]
-    }
-   },
+   "bots": {},
    "region": "UK",
    "name": "The Works",
    "dr": 69.0
@@ -28851,124 +28624,11 @@
   },
   {
    "domain": "shoezone.com",
-   "fetched": "https://www.shoezone.com/robots.txt",
-   "error": null,
+   "fetched": null,
+   "error": "HTTP 503",
    "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {
-    "GPTBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "ClaudeBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Applebot-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Meta-ExternalAgent": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Bytespider": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Claude-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "PerplexityBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    },
-    "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "*?bn="
-     ]
-    }
-   },
+   "bots": {},
    "region": "UK",
    "name": "Shoe Zone",
    "dr": 54.0
@@ -38319,7 +37979,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "server",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -53780,7 +53440,7 @@
    "domain": "bedbathandbeyond.com",
    "fetched": "https://www.bedbathandbeyond.com/robots.txt",
    "error": null,
-   "edge": "ats/9.2.11",
+   "edge": "ats/9.2.12",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -64522,8 +64182,8 @@
    "bots": {
     "GPTBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "gptbot",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64539,8 +64199,8 @@
     },
     "CCBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "ccbot",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64556,8 +64216,8 @@
     },
     "ClaudeBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "claudebot",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64590,8 +64250,8 @@
     },
     "Google-Extended": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "google-extended",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64607,8 +64267,8 @@
     },
     "Applebot-Extended": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "applebot-extended",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64624,8 +64284,8 @@
     },
     "Meta-ExternalAgent": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "meta-externalagent",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64658,8 +64318,8 @@
     },
     "OAI-SearchBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "oai-searchbot",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64675,8 +64335,8 @@
     },
     "Claude-SearchBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "claude-searchbot",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64692,8 +64352,8 @@
     },
     "PerplexityBot": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "perplexitybot",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64709,8 +64369,8 @@
     },
     "ChatGPT-User": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "chatgpt-user",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64726,8 +64386,8 @@
     },
     "Claude-User": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "claude-user",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64743,8 +64403,8 @@
     },
     "Perplexity-User": {
      "verdict": "partial",
-     "via": "*",
-     "explicit": false,
+     "via": "perplexity-user",
+     "explicit": true,
      "paths": [
       "/*?isAjax=*",
       "/*?size=*",
@@ -64968,11 +64628,130 @@
   },
   {
    "domain": "rockauto.com",
-   "fetched": null,
-   "error": "<urlopen error timed out>",
-   "edge": "unknown",
+   "fetched": "https://www.rockauto.com/robots.txt",
+   "error": null,
+   "edge": "nginx",
    "cloudflare_managed": false,
-   "bots": {},
+   "bots": {
+    "GPTBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "CCBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "ClaudeBot": {
+     "verdict": "blocked",
+     "via": "claudebot",
+     "explicit": true
+    },
+    "anthropic-ai": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Google-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Applebot-Extended": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Meta-ExternalAgent": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Bytespider": {
+     "verdict": "blocked",
+     "via": "bytespider",
+     "explicit": true
+    },
+    "OAI-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Claude-SearchBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "PerplexityBot": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "ChatGPT-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Claude-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    },
+    "Perplexity-User": {
+     "verdict": "partial",
+     "via": "*",
+     "explicit": false,
+     "paths": [
+      "/info/",
+      "/cgi-bin/"
+     ]
+    }
+   },
    "region": "US",
    "name": "RockAuto",
    "dr": 73.0
