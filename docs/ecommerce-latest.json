@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-26T16:53:53.386916+00:00",
+ "run_at": "2026-11-27T16:39:23.919966+00:00",
  "user_agent": "LeeFootAIBotAudit/0.1 (+https://leefoot.com; robots.txt transparency audit; contact: lee@leefoot.com)",
  "collector": "github-actions",
  "bots": {
@@ -23,7 +23,7 @@
    "domain": "amazon.co.uk",
    "fetched": "https://www.amazon.co.uk/robots.txt",
    "error": null,
-   "edge": "cloudfront",
+   "edge": "server",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
@@ -8193,7 +8193,7 @@
   {
    "domain": "adidas.co.uk",
    "fetched": null,
-   "error": "The read operation timed out",
+   "error": "HTTP 403",
    "edge": "unknown",
    "cloudflare_managed": false,
    "bots": {},
@@ -21521,238 +21521,11 @@
   },
   {
    "domain": "gsfcarparts.com",
-   "fetched": "https://www.gsfcarparts.com/robots.txt",
-   "error": null,
-   "edge": "cloudflare",
+   "fetched": null,
+   "error": "HTTP 403",
+   "edge": "unknown",
    "cloudflare_managed": false,
-   "bots": {
-    "GPTBot": {
-     "verdict": "blocked",
-     "via": "gptbot",
-     "explicit": true
-    },
-    "CCBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "ClaudeBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "anthropic-ai": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Google-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Applebot-Extended": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Meta-ExternalAgent": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Bytespider": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "OAI-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Claude-SearchBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "PerplexityBot": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "ChatGPT-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Claude-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    },
-    "Perplexity-User": {
-     "verdict": "partial",
-     "via": "*",
-     "explicit": false,
-     "paths": [
-      "/admin",
-      "/checkout",
-      "/customer",
-      "/results?*",
-      "/*?SID=",
-      "*?reference_number=*",
-      "*?___SID=*",
-      "*?oil_viscosity_sae=*",
-      "*?quality=*",
-      "*?sort_by=*"
-     ]
-    }
-   },
+   "bots": {},
    "region": "UK",
    "name": "GSF Car Parts",
    "dr": 52.0
@@ -37811,7 +37584,7 @@
    "domain": "amazon.com",
    "fetched": "https://www.amazon.com/robots.txt",
    "error": null,
-   "edge": "server",
+   "edge": "cloudfront",
    "cloudflare_managed": false,
    "bots": {
     "GPTBot": {
